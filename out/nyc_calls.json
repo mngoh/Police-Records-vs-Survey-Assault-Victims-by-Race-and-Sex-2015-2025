@@ -25,9 +25,9 @@
    "calls_per_1k": 7.4,
    "victims_per_1k": 4.6,
    "victims_per_call": 0.622,
-   "black_women_rate": 1880,
-   "white_women_rate": 248,
-   "ratio_black_white_women": 7.57
+   "black_women_rate": 2010,
+   "white_women_rate": 270,
+   "ratio_black_white_women": 7.43
   },
   {
    "band": 1,
@@ -40,9 +40,9 @@
    "calls_per_1k": 13.4,
    "victims_per_1k": 7.5,
    "victims_per_call": 0.557,
-   "black_women_rate": 2328,
-   "white_women_rate": 292,
-   "ratio_black_white_women": 7.96
+   "black_women_rate": 2522,
+   "white_women_rate": 335,
+   "ratio_black_white_women": 7.53
   },
   {
    "band": 2,
@@ -55,9 +55,9 @@
    "calls_per_1k": 15.6,
    "victims_per_1k": 8.8,
    "victims_per_call": 0.564,
-   "black_women_rate": 1963,
-   "white_women_rate": 328,
-   "ratio_black_white_women": 5.98
+   "black_women_rate": 2101,
+   "white_women_rate": 381,
+   "ratio_black_white_women": 5.51
   },
   {
    "band": 3,
@@ -70,9 +70,9 @@
    "calls_per_1k": 22.5,
    "victims_per_1k": 12.7,
    "victims_per_call": 0.565,
-   "black_women_rate": 1782,
-   "white_women_rate": 493,
-   "ratio_black_white_women": 3.61
+   "black_women_rate": 2056,
+   "white_women_rate": 574,
+   "ratio_black_white_women": 3.58
   },
   {
    "band": 4,
@@ -85,9 +85,9 @@
    "calls_per_1k": 20.5,
    "victims_per_1k": 10.9,
    "victims_per_call": 0.535,
-   "black_women_rate": 1246,
-   "white_women_rate": 437,
-   "ratio_black_white_women": 2.85
+   "black_women_rate": 1384,
+   "white_women_rate": 519,
+   "ratio_black_white_women": 2.66
   }
  ],
  "top_over_bottom": {
