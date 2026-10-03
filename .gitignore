@@ -1,0 +1,4 @@
+# the NCVS files are large; refetch with scripts/fetch_ncvs.py (the .source.json records are tracked)
+data/raw/*.csv
+__pycache__/
+.DS_Store

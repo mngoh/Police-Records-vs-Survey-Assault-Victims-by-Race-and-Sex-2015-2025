@@ -1,0 +1,1876 @@
+{
+ "windows": {
+  "2022 to 2024, US": {
+   "cases": {
+    "Black": 248,
+    "White": 1314,
+    "Hispanic": 304,
+    "Asian": 83
+   },
+   "cases_reported": {
+    "Black": 133,
+    "White": 619,
+    "Hispanic": 158,
+    "Asian": 29
+   },
+   "rate_all": {
+    "Black": 1671,
+    "White": 1761,
+    "Hispanic": 1640,
+    "Asian": 925
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 0.95,
+     "ci95": [
+      0.73,
+      1.23
+     ],
+     "ci95_deff2": [
+      0.65,
+      1.36
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.02,
+     "ci95": [
+      0.72,
+      1.37
+     ],
+     "ci95_deff2": [
+      0.63,
+      1.55
+     ]
+    },
+    "Asian": {
+     "ratio": 1.81,
+     "ci95": [
+      1.23,
+      2.65
+     ],
+     "ci95_deff2": [
+      1.05,
+      3.1
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 872,
+    "White": 793,
+    "Hispanic": 927,
+    "Asian": 307
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.1,
+     "ci95": [
+      0.75,
+      1.5
+     ],
+     "ci95_deff2": [
+      0.64,
+      1.71
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.94,
+     "ci95": [
+      0.58,
+      1.39
+     ],
+     "ci95_deff2": [
+      0.48,
+      1.63
+     ]
+    },
+    "Asian": {
+     "ratio": 2.84,
+     "ci95": [
+      1.55,
+      6.82
+     ],
+     "ci95_deff2": [
+      1.2,
+      9.8
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 774,
+    "White": 938,
+    "Hispanic": 702,
+    "Asian": 549
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.82,
+     "ci95": [
+      0.57,
+      1.18
+     ],
+     "ci95_deff2": [
+      0.48,
+      1.37
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.1,
+     "ci95": [
+      0.69,
+      1.69
+     ],
+     "ci95_deff2": [
+      0.57,
+      2.02
+     ]
+    },
+    "Asian": {
+     "ratio": 1.41,
+     "ci95": [
+      0.82,
+      2.44
+     ],
+     "ci95_deff2": [
+      0.66,
+      3.06
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 53.0,
+     "ci95": [
+      42.3,
+      62.7
+     ],
+     "ci95_deff2": [
+      37.9,
+      66.7
+     ]
+    },
+    "White": {
+     "pct": 45.8,
+     "ci95": [
+      40.7,
+      50.5
+     ],
+     "ci95_deff2": [
+      38.6,
+      52.4
+     ]
+    },
+    "Hispanic": {
+     "pct": 56.9,
+     "ci95": [
+      47.5,
+      65.4
+     ],
+     "ci95_deff2": [
+      43.6,
+      68.9
+     ]
+    },
+    "Asian": {
+     "pct": 35.9,
+     "ci95": [
+      18.6,
+      50.7
+     ],
+     "ci95_deff2": [
+      11.4,
+      56.8
+     ]
+    }
+   }
+  },
+  "2022 to 2024, Places of 250,000+": {
+   "cases": {
+    "Black": 92,
+    "White": 224,
+    "Hispanic": 101,
+    "Asian": 41
+   },
+   "cases_reported": {
+    "Black": 48,
+    "White": 76,
+    "Hispanic": 49,
+    "Asian": 9
+   },
+   "rate_all": {
+    "Black": 2210,
+    "White": 2192,
+    "Hispanic": 2210,
+    "Asian": 1791
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.01,
+     "ci95": [
+      0.7,
+      1.37
+     ],
+     "ci95_deff2": [
+      0.6,
+      1.56
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.0,
+     "ci95": [
+      0.61,
+      1.59
+     ],
+     "ci95_deff2": [
+      0.49,
+      1.93
+     ]
+    },
+    "Asian": {
+     "ratio": 1.23,
+     "ci95": [
+      0.72,
+      2.48
+     ],
+     "ci95_deff2": [
+      0.58,
+      3.31
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 1173,
+    "White": 690,
+    "Hispanic": 1181,
+    "Asian": 526
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.7,
+     "ci95": [
+      1.0,
+      2.93
+     ],
+     "ci95_deff2": [
+      0.8,
+      3.68
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.99,
+     "ci95": [
+      0.5,
+      2.06
+     ],
+     "ci95_deff2": [
+      0.37,
+      2.79
+     ]
+    },
+    "Asian": {
+     "ratio": 2.23,
+     "ci95": [
+      0.7,
+      15.84
+     ],
+     "ci95_deff2": [
+      0.43,
+      35.68
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 990,
+    "White": 1465,
+    "Hispanic": 996,
+    "Asian": 1222
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.68,
+     "ci95": [
+      0.41,
+      1.07
+     ],
+     "ci95_deff2": [
+      0.33,
+      1.29
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.99,
+     "ci95": [
+      0.57,
+      1.6
+     ],
+     "ci95_deff2": [
+      0.46,
+      1.95
+     ]
+    },
+    "Asian": {
+     "ratio": 0.81,
+     "ci95": [
+      0.45,
+      1.49
+     ],
+     "ci95_deff2": [
+      0.35,
+      1.93
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 54.2,
+     "ci95": [
+      39.4,
+      68.9
+     ],
+     "ci95_deff2": [
+      33.3,
+      74.9
+     ]
+    },
+    "White": {
+     "pct": 32.0,
+     "ci95": [
+      24.5,
+      40.4
+     ],
+     "ci95_deff2": [
+      21.4,
+      43.9
+     ]
+    },
+    "Hispanic": {
+     "pct": 54.3,
+     "ci95": [
+      36.9,
+      69.3
+     ],
+     "ci95_deff2": [
+      29.7,
+      75.5
+     ]
+    },
+    "Asian": {
+     "pct": 30.1,
+     "ci95": [
+      5.7,
+      56.0
+     ],
+     "ci95_deff2": [
+      0.0,
+      66.7
+     ]
+    }
+   }
+  },
+  "2015 to 2024, US": {
+   "cases": {
+    "Black": 919,
+    "White": 4789,
+    "Hispanic": 976,
+    "Asian": 203
+   },
+   "cases_reported": {
+    "Black": 476,
+    "White": 2295,
+    "Hispanic": 524,
+    "Asian": 80
+   },
+   "rate_all": {
+    "Black": 1585,
+    "White": 1612,
+    "Hispanic": 1377,
+    "Asian": 737
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 0.98,
+     "ci95": [
+      0.85,
+      1.13
+     ],
+     "ci95_deff2": [
+      0.8,
+      1.2
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.15,
+     "ci95": [
+      0.96,
+      1.36
+     ],
+     "ci95_deff2": [
+      0.89,
+      1.45
+     ]
+    },
+    "Asian": {
+     "ratio": 2.15,
+     "ci95": [
+      1.58,
+      3.0
+     ],
+     "ci95_deff2": [
+      1.39,
+      3.44
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 837,
+    "White": 743,
+    "Hispanic": 755,
+    "Asian": 318
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.13,
+     "ci95": [
+      0.93,
+      1.37
+     ],
+     "ci95_deff2": [
+      0.86,
+      1.49
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.11,
+     "ci95": [
+      0.89,
+      1.39
+     ],
+     "ci95_deff2": [
+      0.81,
+      1.53
+     ]
+    },
+    "Asian": {
+     "ratio": 2.63,
+     "ci95": [
+      1.65,
+      4.75
+     ],
+     "ci95_deff2": [
+      1.36,
+      6.07
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 719,
+    "White": 844,
+    "Hispanic": 609,
+    "Asian": 385
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.85,
+     "ci95": [
+      0.69,
+      1.02
+     ],
+     "ci95_deff2": [
+      0.64,
+      1.1
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.18,
+     "ci95": [
+      0.95,
+      1.49
+     ],
+     "ci95_deff2": [
+      0.86,
+      1.64
+     ]
+    },
+    "Asian": {
+     "ratio": 1.87,
+     "ci95": [
+      1.38,
+      2.61
+     ],
+     "ci95_deff2": [
+      1.22,
+      2.99
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 53.8,
+     "ci95": [
+      48.3,
+      59.5
+     ],
+     "ci95_deff2": [
+      46.1,
+      61.8
+     ]
+    },
+    "White": {
+     "pct": 46.8,
+     "ci95": [
+      43.7,
+      50.0
+     ],
+     "ci95_deff2": [
+      42.4,
+      51.3
+     ]
+    },
+    "Hispanic": {
+     "pct": 55.3,
+     "ci95": [
+      50.3,
+      60.6
+     ],
+     "ci95_deff2": [
+      48.2,
+      62.8
+     ]
+    },
+    "Asian": {
+     "pct": 45.2,
+     "ci95": [
+      33.5,
+      54.9
+     ],
+     "ci95_deff2": [
+      28.6,
+      58.9
+     ]
+    }
+   }
+  },
+  "2015 to 2024, Places of 250,000+": {
+   "cases": {
+    "Black": 381,
+    "White": 769,
+    "Hispanic": 331,
+    "Asian": 73
+   },
+   "cases_reported": {
+    "Black": 186,
+    "White": 301,
+    "Hispanic": 170,
+    "Asian": 21
+   },
+   "rate_all": {
+    "Black": 2240,
+    "White": 2339,
+    "Hispanic": 1646,
+    "Asian": 876
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 0.96,
+     "ci95": [
+      0.73,
+      1.21
+     ],
+     "ci95_deff2": [
+      0.65,
+      1.33
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.36,
+     "ci95": [
+      1.04,
+      1.78
+     ],
+     "ci95_deff2": [
+      0.92,
+      1.99
+     ]
+    },
+    "Asian": {
+     "ratio": 2.56,
+     "ci95": [
+      1.75,
+      4.01
+     ],
+     "ci95_deff2": [
+      1.49,
+      4.83
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 1237,
+    "White": 901,
+    "Hispanic": 852,
+    "Asian": 277
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.37,
+     "ci95": [
+      0.92,
+      1.88
+     ],
+     "ci95_deff2": [
+      0.78,
+      2.14
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.45,
+     "ci95": [
+      0.97,
+      2.1
+     ],
+     "ci95_deff2": [
+      0.82,
+      2.44
+     ]
+    },
+    "Asian": {
+     "ratio": 4.47,
+     "ci95": [
+      2.2,
+      12.41
+     ],
+     "ci95_deff2": [
+      1.64,
+      18.95
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 959,
+    "White": 1414,
+    "Hispanic": 774,
+    "Asian": 585
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.68,
+     "ci95": [
+      0.49,
+      0.91
+     ],
+     "ci95_deff2": [
+      0.43,
+      1.02
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.24,
+     "ci95": [
+      0.9,
+      1.79
+     ],
+     "ci95_deff2": [
+      0.78,
+      2.08
+     ]
+    },
+    "Asian": {
+     "ratio": 1.64,
+     "ci95": [
+      1.14,
+      2.73
+     ],
+     "ci95_deff2": [
+      0.98,
+      3.36
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 56.3,
+     "ci95": [
+      47.0,
+      64.5
+     ],
+     "ci95_deff2": [
+      43.2,
+      67.9
+     ]
+    },
+    "White": {
+     "pct": 38.9,
+     "ci95": [
+      31.3,
+      47.0
+     ],
+     "ci95_deff2": [
+      28.2,
+      50.3
+     ]
+    },
+    "Hispanic": {
+     "pct": 52.4,
+     "ci95": [
+      44.2,
+      61.9
+     ],
+     "ci95_deff2": [
+      40.8,
+      65.8
+     ]
+    },
+    "Asian": {
+     "pct": 32.1,
+     "ci95": [
+      13.8,
+      49.9
+     ],
+     "ci95_deff2": [
+      6.2,
+      57.2
+     ]
+    }
+   }
+  }
+ },
+ "robustness": {
+  "2015 to 2024, US, aggravated only": {
+   "cases": {
+    "Black": 210,
+    "White": 1007,
+    "Hispanic": 261,
+    "Asian": 37
+   },
+   "cases_reported": {
+    "Black": 150,
+    "White": 604,
+    "Hispanic": 181,
+    "Asian": 17
+   },
+   "rate_all": {
+    "Black": 367,
+    "White": 341,
+    "Hispanic": 370,
+    "Asian": 126
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.07,
+     "ci95": [
+      0.85,
+      1.39
+     ],
+     "ci95_deff2": [
+      0.78,
+      1.54
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.99,
+     "ci95": [
+      0.74,
+      1.36
+     ],
+     "ci95_deff2": [
+      0.66,
+      1.56
+     ]
+    },
+    "Asian": {
+     "ratio": 2.91,
+     "ci95": [
+      1.83,
+      4.97
+     ],
+     "ci95_deff2": [
+      1.51,
+      6.19
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 262,
+    "White": 198,
+    "Hispanic": 266,
+    "Asian": 44
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.33,
+     "ci95": [
+      0.98,
+      1.78
+     ],
+     "ci95_deff2": [
+      0.87,
+      2.01
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.99,
+     "ci95": [
+      0.68,
+      1.47
+     ],
+     "ci95_deff2": [
+      0.58,
+      1.74
+     ]
+    },
+    "Asian": {
+     "ratio": 6.01,
+     "ci95": [
+      3.37,
+      12.03
+     ],
+     "ci95_deff2": [
+      2.65,
+      16.03
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 97,
+    "White": 141,
+    "Hispanic": 103,
+    "Asian": 66
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.69,
+     "ci95": [
+      0.45,
+      0.99
+     ],
+     "ci95_deff2": [
+      0.38,
+      1.14
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.95,
+     "ci95": [
+      0.59,
+      1.54
+     ],
+     "ci95_deff2": [
+      0.48,
+      1.89
+     ]
+    },
+    "Asian": {
+     "ratio": 1.48,
+     "ci95": [
+      0.87,
+      3.18
+     ],
+     "ci95_deff2": [
+      0.7,
+      4.37
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 72.9,
+     "ci95": [
+      64.4,
+      80.8
+     ],
+     "ci95_deff2": [
+      60.9,
+      84.1
+     ]
+    },
+    "White": {
+     "pct": 58.5,
+     "ci95": [
+      52.0,
+      64.7
+     ],
+     "ci95_deff2": [
+      49.3,
+      67.3
+     ]
+    },
+    "Hispanic": {
+     "pct": 72.1,
+     "ci95": [
+      64.5,
+      80.2
+     ],
+     "ci95_deff2": [
+      61.3,
+      83.6
+     ]
+    },
+    "Asian": {
+     "pct": 39.9,
+     "ci95": [
+      24.4,
+      59.7
+     ],
+     "ci95_deff2": [
+      18.0,
+      67.9
+     ]
+    }
+   }
+  },
+  "2015 to 2024, US, injured only": {
+   "cases": {
+    "Black": 232,
+    "White": 970,
+    "Hispanic": 224,
+    "Asian": 34
+   },
+   "cases_reported": {
+    "Black": 136,
+    "White": 564,
+    "Hispanic": 163,
+    "Asian": 21
+   },
+   "rate_all": {
+    "Black": 357,
+    "White": 340,
+    "Hispanic": 290,
+    "Asian": 135
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.05,
+     "ci95": [
+      0.82,
+      1.33
+     ],
+     "ci95_deff2": [
+      0.74,
+      1.46
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.23,
+     "ci95": [
+      0.92,
+      1.67
+     ],
+     "ci95_deff2": [
+      0.82,
+      1.9
+     ]
+    },
+    "Asian": {
+     "ratio": 2.65,
+     "ci95": [
+      1.62,
+      5.04
+     ],
+     "ci95_deff2": [
+      1.32,
+      6.58
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 228,
+    "White": 177,
+    "Hispanic": 208,
+    "Asian": 80
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.29,
+     "ci95": [
+      0.98,
+      1.69
+     ],
+     "ci95_deff2": [
+      0.87,
+      1.88
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.1,
+     "ci95": [
+      0.77,
+      1.51
+     ],
+     "ci95_deff2": [
+      0.67,
+      1.73
+     ]
+    },
+    "Asian": {
+     "ratio": 2.87,
+     "ci95": [
+      1.49,
+      7.39
+     ],
+     "ci95_deff2": [
+      1.14,
+      10.93
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 128,
+    "White": 160,
+    "Hispanic": 78,
+    "Asian": 30
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.8,
+     "ci95": [
+      0.49,
+      1.25
+     ],
+     "ci95_deff2": [
+      0.4,
+      1.51
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.64,
+     "ci95": [
+      0.94,
+      2.83
+     ],
+     "ci95_deff2": [
+      0.75,
+      3.55
+     ]
+    },
+    "Asian": {
+     "ratio": 4.24,
+     "ci95": [
+      2.05,
+      12.78
+     ],
+     "ci95_deff2": [
+      1.52,
+      20.19
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 64.2,
+     "ci95": [
+      53.4,
+      73.7
+     ],
+     "ci95_deff2": [
+      48.9,
+      77.6
+     ]
+    },
+    "White": {
+     "pct": 52.5,
+     "ci95": [
+      46.5,
+      58.4
+     ],
+     "ci95_deff2": [
+      44.0,
+      60.8
+     ]
+    },
+    "Hispanic": {
+     "pct": 72.7,
+     "ci95": [
+      62.5,
+      81.2
+     ],
+     "ci95_deff2": [
+      58.3,
+      84.6
+     ]
+    },
+    "Asian": {
+     "pct": 72.6,
+     "ci95": [
+      44.5,
+      89.4
+     ],
+     "ci95_deff2": [
+      32.9,
+      96.4
+     ]
+    }
+   }
+  },
+  "2015 to 2024, US, series victimizations left out": {
+   "cases": {
+    "Black": 895,
+    "White": 4554,
+    "Hispanic": 947,
+    "Asian": 194
+   },
+   "cases_reported": {
+    "Black": 467,
+    "White": 2198,
+    "Hispanic": 509,
+    "Asian": 73
+   },
+   "rate_all": {
+    "Black": 1374,
+    "White": 1168,
+    "Hispanic": 1140,
+    "Asian": 571
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.18,
+     "ci95": [
+      1.05,
+      1.32
+     ],
+     "ci95_deff2": [
+      1.0,
+      1.38
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.2,
+     "ci95": [
+      1.07,
+      1.39
+     ],
+     "ci95_deff2": [
+      1.01,
+      1.48
+     ]
+    },
+    "Asian": {
+     "ratio": 2.41,
+     "ci95": [
+      2.02,
+      3.0
+     ],
+     "ci95_deff2": [
+      1.88,
+      3.28
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 715,
+    "White": 564,
+    "Hispanic": 609,
+    "Asian": 193
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.27,
+     "ci95": [
+      1.11,
+      1.43
+     ],
+     "ci95_deff2": [
+      1.05,
+      1.5
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.17,
+     "ci95": [
+      1.0,
+      1.39
+     ],
+     "ci95_deff2": [
+      0.93,
+      1.49
+     ]
+    },
+    "Asian": {
+     "ratio": 3.7,
+     "ci95": [
+      2.7,
+      5.09
+     ],
+     "ci95_deff2": [
+      2.37,
+      5.81
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 636,
+    "White": 583,
+    "Hispanic": 518,
+    "Asian": 360
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 1.09,
+     "ci95": [
+      0.9,
+      1.33
+     ],
+     "ci95_deff2": [
+      0.83,
+      1.45
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.23,
+     "ci95": [
+      1.0,
+      1.52
+     ],
+     "ci95_deff2": [
+      0.92,
+      1.66
+     ]
+    },
+    "Asian": {
+     "ratio": 1.77,
+     "ci95": [
+      1.39,
+      2.41
+     ],
+     "ci95_deff2": [
+      1.25,
+      2.74
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 52.9,
+     "ci95": [
+      47.7,
+      57.6
+     ],
+     "ci95_deff2": [
+      45.5,
+      59.5
+     ]
+    },
+    "White": {
+     "pct": 49.2,
+     "ci95": [
+      47.2,
+      51.3
+     ],
+     "ci95_deff2": [
+      46.3,
+      52.2
+     ]
+    },
+    "Hispanic": {
+     "pct": 54.1,
+     "ci95": [
+      50.2,
+      58.6
+     ],
+     "ci95_deff2": [
+      48.6,
+      60.5
+     ]
+    },
+    "Asian": {
+     "pct": 34.9,
+     "ci95": [
+      26.4,
+      43.4
+     ],
+     "ci95_deff2": [
+      22.9,
+      47.0
+     ]
+    }
+   }
+  },
+  "2015 to 2024, Places of 250,000+, aggravated only": {
+   "cases": {
+    "Black": 93,
+    "White": 156,
+    "Hispanic": 89,
+    "Asian": 10
+   },
+   "cases_reported": {
+    "Black": 62,
+    "White": 83,
+    "Hispanic": 61,
+    "Asian": 3
+   },
+   "rate_all": {
+    "Black": 569,
+    "White": 375,
+    "Hispanic": 540,
+    "Asian": 97
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.52,
+     "ci95": [
+      1.0,
+      2.25
+     ],
+     "ci95_deff2": [
+      0.84,
+      2.65
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.05,
+     "ci95": [
+      0.6,
+      1.74
+     ],
+     "ci95_deff2": [
+      0.48,
+      2.14
+     ]
+    },
+    "Asian": {
+     "ratio": 5.87,
+     "ci95": [
+      3.29,
+      15.59
+     ],
+     "ci95_deff2": [
+      2.59,
+      23.36
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 415,
+    "White": 234,
+    "Hispanic": 376,
+    "Asian": 25
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.78,
+     "ci95": [
+      1.09,
+      2.96
+     ],
+     "ci95_deff2": [
+      0.89,
+      3.65
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.11,
+     "ci95": [
+      0.56,
+      2.12
+     ],
+     "ci95_deff2": [
+      0.42,
+      2.78
+     ]
+    },
+    "Asian": {
+     "ratio": 16.5,
+     "ci95": [
+      7.08,
+      NaN
+     ],
+     "ci95_deff2": [
+      4.98,
+      NaN
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 140,
+    "White": 134,
+    "Hispanic": 157,
+    "Asian": 72
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 1.04,
+     "ci95": [
+      0.58,
+      1.8
+     ],
+     "ci95_deff2": [
+      0.45,
+      2.25
+     ]
+    },
+    "Hispanic": {
+     "ratio": 0.89,
+     "ci95": [
+      0.45,
+      1.87
+     ],
+     "ci95_deff2": [
+      0.34,
+      2.54
+     ]
+    },
+    "Asian": {
+     "ratio": 1.95,
+     "ci95": [
+      0.84,
+      6.69
+     ],
+     "ci95_deff2": [
+      0.59,
+      11.15
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 74.8,
+     "ci95": [
+      62.0,
+      84.9
+     ],
+     "ci95_deff2": [
+      56.7,
+      89.2
+     ]
+    },
+    "White": {
+     "pct": 63.5,
+     "ci95": [
+      51.4,
+      72.6
+     ],
+     "ci95_deff2": [
+      46.4,
+      76.4
+     ]
+    },
+    "Hispanic": {
+     "pct": 70.5,
+     "ci95": [
+      54.3,
+      84.8
+     ],
+     "ci95_deff2": [
+      47.6,
+      90.7
+     ]
+    },
+    "Asian": {
+     "pct": 25.9,
+     "ci95": [
+      0.0,
+      59.1
+     ],
+     "ci95_deff2": [
+      0.0,
+      72.9
+     ]
+    }
+   }
+  },
+  "2015 to 2024, Places of 250,000+, injured only": {
+   "cases": {
+    "Black": 101,
+    "White": 112,
+    "Hispanic": 67,
+    "Asian": 5
+   },
+   "cases_reported": {
+    "Black": 63,
+    "White": 64,
+    "Hispanic": 43,
+    "Asian": 4
+   },
+   "rate_all": {
+    "Black": 526,
+    "White": 303,
+    "Hispanic": 297,
+    "Asian": 44
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.73,
+     "ci95": [
+      1.11,
+      2.86
+     ],
+     "ci95_deff2": [
+      0.92,
+      3.52
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.77,
+     "ci95": [
+      1.12,
+      2.68
+     ],
+     "ci95_deff2": [
+      0.93,
+      3.18
+     ]
+    },
+    "Asian": {
+     "ratio": 11.97,
+     "ci95": [
+      5.14,
+      59.71
+     ],
+     "ci95_deff2": [
+      3.62,
+      116.19
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 385,
+    "White": 170,
+    "Hispanic": 197,
+    "Asian": 31
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 2.27,
+     "ci95": [
+      1.33,
+      3.81
+     ],
+     "ci95_deff2": [
+      1.07,
+      4.72
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.96,
+     "ci95": [
+      1.17,
+      3.44
+     ],
+     "ci95_deff2": [
+      0.94,
+      4.35
+     ]
+    },
+    "Asian": {
+     "ratio": 12.3,
+     "ci95": [
+      4.65,
+      91.57
+     ],
+     "ci95_deff2": [
+      3.1,
+      210.27
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 139,
+    "White": 133,
+    "Hispanic": 90,
+    "Asian": 13
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 1.04,
+     "ci95": [
+      0.35,
+      2.44
+     ],
+     "ci95_deff2": [
+      0.22,
+      3.47
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.54,
+     "ci95": [
+      0.54,
+      3.53
+     ],
+     "ci95_deff2": [
+      0.35,
+      4.97
+     ]
+    },
+    "Asian": {
+     "ratio": 11.06,
+     "ci95": [
+      2.74,
+      NaN
+     ],
+     "ci95_deff2": [
+      1.54,
+      NaN
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 73.5,
+     "ci95": [
+      58.9,
+      88.9
+     ],
+     "ci95_deff2": [
+      52.9,
+      95.3
+     ]
+    },
+    "White": {
+     "pct": 56.0,
+     "ci95": [
+      40.7,
+      72.1
+     ],
+     "ci95_deff2": [
+      34.3,
+      78.8
+     ]
+    },
+    "Hispanic": {
+     "pct": 68.5,
+     "ci95": [
+      53.5,
+      80.1
+     ],
+     "ci95_deff2": [
+      47.3,
+      84.9
+     ]
+    },
+    "Asian": {
+     "pct": 71.3,
+     "ci95": [
+      0.0,
+      100.0
+     ],
+     "ci95_deff2": [
+      0.0,
+      100.0
+     ]
+    }
+   }
+  },
+  "2015 to 2024, Places of 250,000+, series victimizations left out": {
+   "cases": {
+    "Black": 370,
+    "White": 735,
+    "Hispanic": 323,
+    "Asian": 70
+   },
+   "cases_reported": {
+    "Black": 180,
+    "White": 285,
+    "Hispanic": 167,
+    "Asian": 18
+   },
+   "rate_all": {
+    "Black": 1922,
+    "White": 1632,
+    "Hispanic": 1410,
+    "Asian": 774
+   },
+   "ratio_all": {
+    "White": {
+     "ratio": 1.18,
+     "ci95": [
+      0.98,
+      1.43
+     ],
+     "ci95_deff2": [
+      0.91,
+      1.54
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.36,
+     "ci95": [
+      1.1,
+      1.7
+     ],
+     "ci95_deff2": [
+      1.01,
+      1.86
+     ]
+    },
+    "Asian": {
+     "ratio": 2.48,
+     "ci95": [
+      1.79,
+      3.62
+     ],
+     "ci95_deff2": [
+      1.56,
+      4.24
+     ]
+    }
+   },
+   "rate_reported": {
+    "Black": 1006,
+    "White": 618,
+    "Hispanic": 730,
+    "Asian": 175
+   },
+   "ratio_reported": {
+    "White": {
+     "ratio": 1.63,
+     "ci95": [
+      1.25,
+      2.16
+     ],
+     "ci95_deff2": [
+      1.12,
+      2.43
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.38,
+     "ci95": [
+      1.02,
+      1.87
+     ],
+     "ci95_deff2": [
+      0.9,
+      2.13
+     ]
+    },
+    "Asian": {
+     "ratio": 5.74,
+     "ci95": [
+      3.3,
+      12.92
+     ],
+     "ci95_deff2": [
+      2.62,
+      18.08
+     ]
+    }
+   },
+   "rate_not_reported": {
+    "Black": 872,
+    "White": 990,
+    "Hispanic": 661,
+    "Asian": 585
+   },
+   "ratio_not_reported": {
+    "White": {
+     "ratio": 0.88,
+     "ci95": [
+      0.67,
+      1.14
+     ],
+     "ci95_deff2": [
+      0.6,
+      1.27
+     ]
+    },
+    "Hispanic": {
+     "ratio": 1.32,
+     "ci95": [
+      0.97,
+      1.79
+     ],
+     "ci95_deff2": [
+      0.85,
+      2.04
+     ]
+    },
+    "Asian": {
+     "ratio": 1.49,
+     "ci95": [
+      0.97,
+      2.38
+     ],
+     "ci95_deff2": [
+      0.81,
+      2.89
+     ]
+    }
+   },
+   "share_reported": {
+    "Black": {
+     "pct": 53.6,
+     "ci95": [
+      46.7,
+      60.7
+     ],
+     "ci95_deff2": [
+      43.9,
+      63.7
+     ]
+    },
+    "White": {
+     "pct": 38.5,
+     "ci95": [
+      33.4,
+      43.3
+     ],
+     "ci95_deff2": [
+      31.3,
+      45.3
+     ]
+    },
+    "Hispanic": {
+     "pct": 52.5,
+     "ci95": [
+      45.0,
+      59.3
+     ],
+     "ci95_deff2": [
+      41.9,
+      62.1
+     ]
+    },
+    "Asian": {
+     "pct": 23.1,
+     "ci95": [
+      11.6,
+      36.3
+     ],
+     "ci95_deff2": [
+      6.8,
+      41.8
+     ]
+    }
+   }
+  }
+ },
+ "police": {
+  "cities": 51,
+  "victims": {
+   "Black": 540269,
+   "Hispanic": 292902,
+   "White": 221969,
+   "Asian": 23042
+  },
+  "rate": {
+   "Black": 4393,
+   "Hispanic": 2095,
+   "White": 1048,
+   "Asian": 450
+  },
+  "ratio": {
+   "White": 4.19,
+   "Hispanic": 2.1,
+   "Asian": 9.75
+  }
+ },
+ "police_aggravated": {
+  "cities": 51,
+  "victims": {
+   "Black": 140489,
+   "Hispanic": 66568,
+   "White": 49374,
+   "Asian": 5446
+  },
+  "rate": {
+   "Black": 1142,
+   "Hispanic": 476,
+   "White": 233,
+   "Asian": 106
+  },
+  "ratio": {
+   "White": 4.9,
+   "Hispanic": 2.4,
+   "Asian": 10.73
+  }
+ }
+}

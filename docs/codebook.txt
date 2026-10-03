@@ -1,0 +1,554 @@
+                            U.S. Department of Justice
+                            Office of Justice Programs
+                            Bureau of Justice Statistics
+
+
+
+
+Codebooks for:
+NCVS Select - Personal
+Population
+NCVS Select - Personal
+Victimization
+Legacy Version, 1993–2024
+                                NCVS Select – Personal Population and Personal Victimization Codebook
+
+Overview of the National Crime                              Information about the NCVS Select datasets
+Victimization Survey
+                                                            NCVS Select datasets offer a curated set of variables
+The National Crime Victimization Survey (NCVS)              collected through the NCVS. The complete set of
+is the nation's primary source of information on            variables and additional documentation are available
+criminal victimization. Persons are interviewed on          through the public use data files in the National
+the frequency, characteristics, and consequences of         Archive of Criminal Justice Data (https://www.icpsr.
+criminal victimization in the United States.                umich.edu/web/NACJD/series/95).
+
+The NCVS collects information on nonfatal personal          This codebook contains variable names, variable
+crimes (i.e., rape or sexual assault, robbery, aggravated   descriptions, values, and value labels for variables
+and simple assault, and personal larceny) and               in both the NCVS Select personal victimization and
+household property crimes (i.e., burglary/trespassing,      personal population datasets.
+motor-vehicle theft, and other types of theft) both
+reported and not reported to the police. Survey             NCVS Select – Personal Population contains
+respondents provide information about themselves            demographic information of respondents. All
+(e.g., age, sex, race and Hispanic origin, marital          respondents, regardless of whether they reported a
+status, education level, and income) and whether they       personal crime victimization, are included in this file.
+experienced a victimization.                                NCVS Select – Personal Victimization contains personal
+The NCVS was designed with four primary objectives:         crime victimizations. Personal crimes include rape
+(1) to develop detailed information about the victims       and sexual assault, robbery, aggravated and simple
+and consequences of crime, (2) to estimate the number       assault, and personal theft/larceny (purse snatching/
+and types of crimes not reported to the police, (3) to      pocket picking). Persons that did not report a personal
+provide uniform measures of selected types of crimes,       crime victimization are not included in this file.
+and (4) to permit comparisons over time and types of        Victimizations that took place outside of the United
+areas. Beginning in 1992, the survey categorizes crimes     States are excluded from this file.
+as "personal" or "property."                                These datasets use a collection year basis for 1993-2024
+Each respondent is asked a series of screener questions     and include data collected with the legacy version
+designed to determine whether she or he was                 of the NCVS instrument. A collection year contains
+victimized during the 6-month period preceding the          records from interviews conducted from January
+first day of the month of the interview. The data include   through December of the given year. Under the
+type of crime, location of the crime, relationship          collection year format, victimizations are counted in
+between victim and offender, characteristics of the         the year the interview is conducted, regardless of when
+offender, and whether the crime was reported to police.     the crime incident occurred. For more information on
+Basic demographic information such as age, race,            the NCVS, please visit https://bjs.ojp.gov/programs/
+gender, and income are also collected to enable analysis    ncvs. For questions regarding this dataset, please
+of crime by various subpopulations.                         contact askbjs@usdoj.gov.
+                                NCVS Select – Personal Population and Personal Victimization Codebook
+
+2024 NCVS instrument redesign and split sample               The 2024 split sample was applied to the second-stage
+                                                             sample selection. The sample was randomly split
+The NCVS was last redesigned in 1992, more than
+                                                             so that half of the NCVS sample cases in each PSU
+three decades ago. Much has changed since that time,
+                                                             received the legacy instrument and half received the
+both in the level of public acceptance of surveys and
+                                                             redesigned instrument. This allowed the total 2024
+in the nature of crime. To address this, the Bureau of
+                                                             sample—both the sample that received the legacy
+Justice Statistics (BJS) conducted a multiyear effort
+                                                             instrument and the sample that received the redesigned
+to improve the efficiency, reliability, and utility of the
+                                                             instrument—to be similar to recent years.
+NCVS. Through this effort, BJS redesigned the entire
+survey instrument, which includes a household roster,
+a victimization screener, and a detailed crime incident      The data in this 2024 NCVS API includes the data
+report. For more information on the NCVS instrument          collected from the 2024 legacy instrument only.
+redesign, see https://bjs.ojp.gov/programs/ncvs/             Splitting the sample in half while continuing to
+instrument-redesign.                                         produce nationally representative estimates results in
+                                                             a decrease in estimate precision during the instrument
+BJS coordinated with the U.S. Census Bureau to
+                                                             transition period. For the 2024 collection year, BJS will
+administer both the legacy instrument and the
+                                                             archive two sets of data files: one for the 2024 legacy
+redesigned instrument concurrently in 2024, using
+                                                             data and one for the 2024 redesigned data. Each of
+a split-sample design. The sample was divided so
+                                                             these sets of data files will include weights that adjust
+that approximately half of the households were
+                                                             the half sample to known population totals. The sample
+interviewed using the redesigned instrument and half
+                                                             that received the legacy instrument included 109,341
+were interviewed using the legacy instrument. This
+                                                             persons age 12 or older in 69,396 households. Because
+design allows BJS to report criminal victimization
+                                                             NCVS weights are adjusted to known population
+data during the phase-in and produce two sets of
+                                                             totals for each half of the sample, weights in 2024 were
+victimization estimates for 2024. It will also allow for
+                                                             greater than in a typical year leading to more variation
+the continued production of year-to-year comparisons
+                                                             in estimates and higher standard errors. Despite the
+of victimization estimates, which is critical to
+                                                             loss of estimate precision in 2024, BJS and the U.S.
+understanding changes in crime and victimization
+                                                             Census Bureau determined that the stability gained
+in the United States and is a strength of the NCVS
+                                                             from maintaining the current sample size over the long
+data collection.
+                                                             term outweighed the loss of statistical precision.
+In a typical year, NCVS data are obtained from a
+                                                             For more information about the instrument redesign
+nationally representative sample of about 240,000
+                                                             methodology and split sample, see Update on the
+persons in approximately 150,000 households. The
+                                                             NCVS Instrument Redesign (NCJ 304055, BJS, March
+NCVS sample design has two stages. For more
+                                                             2022), Update on the NCVS Instrument Redesign:
+information on the NCVS sample design, see
+                                                             Operational Pilot Test and Split Sample (NCJ 306051,
+National Crime Victimization Survey, 2016: Technical
+                                                             BJS, June 2023) and https://bjs.ojp.gov/programs/ncvs/
+Documentation (NCJ 251442, BJS, December 2017).
+                                                             instrument-redesign.
+The first stage of sampling involves the definition,
+stratification, and selection of primary sampling units
+(PSU), which are defined as large metropolitan areas,
+counties, or groups of counties. The second stage of
+sampling occurs at the housing unit level. Within
+the PSUs selected, the sampling process identifies
+addresses to be included in the sample, and interviews
+are conducted with persons and households at
+those addresses.
+                                  NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Population
+Descriptive name           Short description          Variable name              Values              Value labels
+Person ID                  Unique person              idper                      Unique identifier   N/A
+                           identifier
+Year and quarter           Year and quarter data      yearq                      YYYY.Q              N/A
+                           was collected
+Year                       Year data was              year                       1993-2024           N/A
+                           collected
+Age                        Respondent age on          ager                       1                   12-17
+                           the last day of the
+                           month before the                                      2                   18-24
+                           interview                                             3                   25-34
+                                                                                 4                   35-49
+                                                                                 5                   50-64
+                                                                                 6                   65 or older
+Sex                        Respondent sex             sex                        1                   Male
+                                                                                 2                   Female
+Hispanic origin            Respondent Hispanic        hispanic                   1                   Hispanic
+                           origin
+                                                                                 2                   Non-Hispanic
+                                                                                 98                  Residue
+Race                       Respondent race            race                       1                   White
+                                                                                 2                   Black
+                                                                                 3                   American Indian/
+                                                                                                     Alaska Native
+                                                                                 4                   Asian/Native
+                                                                                                     Hawaiian/Other
+                                                                                                     Pacific Islander1
+                                                                                 5                   More than one race
+Race/Hispanic              Respondent race and        race_ethnicity             1                   Non-Hispanic white
+origin                     Hispanic origin
+                                                                                 2                   Non-Hispanic black
+                                                                                 3                   Non-Hispanic
+                                                                                                     American Indian/
+                                                                                                     Alaska Native
+                                                                                 4                   Non-Hispanic Asian/
+                                                                                                     Native Hawaiian/
+                                                                                                     Other Pacific Islander2
+                                                                                 5                   Non-Hispanic more
+                                                                                                     than one race
+                                                                                 6                   Hispanic
+Annual household           Total income of all   hincome1                        1                   Less than $7,500
+income                     members of the
+                           household for the 12                                  2                   $7,500 to $14,999
+                           months preceding the                                  3                   $15,000 to $24,999
+                           interview. Categories
+                           available from 1993-                                  4                   $25,000 to $34,999
+                           2024 with imputed                                     5                   $35,000 to $49,999
+                           data, starting 2015
+                           Q1.                                                   6                   $50,000 to $74,999
+                                                                                 7                   $75,000 or more
+                                                                                 98                  Residue
+1Includes persons who identify as both Asian and Native Hawaiian or Other Pacific Islander.
+2Ibid.
+                          NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Population
+Descriptive name   Short description       Variable name   Values           Value labels
+Annual household   Imputed income          hincome2        -1               Invalid until 2017 Q1
+income- imputed    categories, starting
+                   2017 Q1                                 1                Less than $25,000
+                                                           2                $25,000 to $49,999
+                                                           3                $50,000 to $99,999
+                                                           4                $100,000 to $199,999
+                                                           5                $200,000 or more
+Marital status     Respondent marital      marital         1                Never married
+                   status
+                                                           2                Married
+                                                           3                Widowed
+                                                           4                Divorced
+                                                           5                Separated
+                                                           98               Residue
+Population size    The size range for      popsize         -1               Invalid until 1995 Q3
+                   the place in which
+                   the housing unit is                     0                Not a place
+                   located, starting                       1                Under 100,000
+                   1995 Q3
+                                                           2                100,000-249,999
+                                                           3                250,000-499,999
+                                                           4                500,000-999,999
+                                                           5                1 million or more
+Region             Region of respondent    region          -1               Invalid until 1995 Q3
+                   residence. The states
+                   have been divided                       1                Northeast
+                   into four groups                        2                Midwest
+                   or census regions,
+                   starting 1995 Q3.                       3                South
+                                                           4                West
+Household MSA      Classification of       msa             1                Principal city within
+                   respondent residence                                     MSA
+                   based on the Office
+                   of Management and                       2                Not part of principal
+                   Budget definition                                        city within MSA
+                   of metropolitan                         3                Outside MSA
+                   statistical areas
+                   (MSAs)
+Household locale   Location of             locality        -1               Invalid until 2020 Q1
+                   respondent
+                   residence based                         1                Urban
+                   on BJS geography                        2                Suburban
+                   definitions, starting
+                   2020 Q1                                 3                Rural
+Education level    Respondent level of     educatn1        1                No schooling
+                   education
+                                                           2                Grade school
+                                                           3                Middle school
+                                                           4                High school
+                                                           5                College
+                                                           98               Residue
+                            NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Population
+Descriptive name     Short description      Variable name   Values            Value labels
+Education level      Respondent level of    educatn2        -1                Invalid until 2003 Q1
+                     education, starting
+                     2003 Q1                                1                 No schooling
+                                                            2                 Grade school
+                                                            3                 Middle school
+                                                            4                 Some high school
+                                                            5                 High school graduate
+                                                            6                 Some college and
+                                                                              associate degree
+                                                            7                 Bachelor’s degree
+                                                            8                 Advanced degree
+                                                            98                Residue
+Veteran status       Respondent veteran      veteran        -2                Invalid until 2017 Q1
+                     status, asked of
+                     persons age 18 or                      -1                Under age 18
+                     older, starting in 2017                0                 Not a veteran
+                     Q1
+                                                            1                 Veteran
+                                                            98                Residue
+                                                            99                Out of universe
+Citizenship status   Respondent             citizen         -1                Invalid until 2017 Q1
+                     citizenship status,
+                     starting 2017 Q1                       1                 Born U.S. citizen
+                                                            2                 Naturalized citizen
+                                                            3                 Non-U.S. Citizen
+                                                            98                Residue
+                                                            99                Out of universe
+Person population Population weight         wgtpercy        numeric           N/A
+weight            to use on person
+                     population data
+                         NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Victimization
+Descriptive name   Short description       Variable name    Values              Value labels
+Person ID          Unique person           idper            Unique identifier   N/A
+                   identifier
+Year and quarter   Year and quarter data   yearq            YYYY.Q              N/A
+                   was collected
+Year               Year data was           year             1993-2023           N/A
+                   collected
+Age                Respondent age on       ager             1                   12-17
+                   the last day of the
+                   month before the                         2                   18-24
+                   interview                                3                   25-34
+                                                            4                   35-49
+                                                            5                   50-64
+                                                            6                   65 or older
+Sex                Respondent sex          sex              1                   Male
+                                                            2                   Female
+Hispanic origin    Respondent Hispanic     hispanic         1                   Hispanic
+                   origin
+                                                            2                   Non-Hispanic
+                                                            98                  Residue
+Race               Respondent race         race             1                   White
+                                                            2                   Black
+                                                            3                   American Indian/
+                                                                                Alaska Native
+                                                            4                   Asian/Native
+                                                                                Hawaiian/Other
+                                                                                Pacific Islander3
+                                                            5                   More than one race
+Race/Hispanic      Respondent race and     race_ethnicity   1                   Non-Hispanic white
+origin             Hispanic origin
+                                                            2                   Non-Hispanic black
+                                                            3                   Non-Hispanic
+                                                                                American Indian/
+                                                                                Alaska Native
+                                                            4                   Non-Hispanic Asian/
+                                                                                Native Hawaiian/
+                                                                                Other Pacific Islander4
+                                                            5                   Non-Hispanic more
+                                                                                than one race
+                                                            6                   Hispanic
+Annual household   Total income of all   hincome1           1                   Less than $7,500
+income             members of the
+                   household for the 12                     2                   $7,500 to $14,999
+                   months preceding the                     3                   $15,000 to $24,999
+                   interview. Categories
+                   available from 1993-                     4                   $25,000 to $34,999
+                   2024 with imputed                        5                   $35,000 to $49,999
+                   data, starting 2015
+                   Q1.                                      6                   $50,000 to $74,999
+                                                            7                   $75,000 or more
+                                                            98                  Residue
+3Ibid.
+4Ibid.
+                          NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Victimization
+Descriptive name   Short description       Variable name   Values           Value labels
+Annual household   Imputed income          hincome2        -1               Invalid until 2017 Q1
+income- imputed    categories, starting
+                   2017 Q1                                 1                Less than $25,000
+                                                           2                $25,000 to $49,999
+                                                           3                $50,000 to $99,999
+                                                           4                $100,000 to $199,999
+                                                           5                $200,000 or more
+Marital status     Respondent marital      marital         1                Never married
+                   status
+                                                           2                Married
+                                                           3                Widowed
+                                                           4                Divorced
+                                                           5                Separated
+                                                           98               Residue
+Population size    The size range for      popsize         -1               Invalid until 1995 Q3
+                   the place in which
+                   the housing unit is                     0                Not a place
+                   located, starting                       1                Under 100,000
+                   1995 Q3
+                                                           2                100,000-249,999
+                                                           3                250,000-499,999
+                                                           4                500,000-999,999
+                                                           5                1 million or more
+Region             Region of respondent    region          -1               Invalid until 1995 Q3
+                   residence. The states
+                   have been divided                       1                Northeast
+                   into four groups                        2                Midwest
+                   or census regions,
+                   starting 1995 Q3.                       3                South
+                                                           4                West
+Location of        Classification of       msa             1                Principal city within
+residence          respondent residence                                     MSA
+                   based on the Office
+                   of Management and                       2                Not part of principal
+                   Budget definition                                        city within MSA
+                   of metropolitan                         3                Outside MSA
+                   statistical areas
+                   (MSAs)
+Household locale   Location of             locality        -1               Invalid until 2020 Q1
+                   respondent
+                   residence based                         1                Urban
+                   on BJS geography                        2                Suburban
+                   definitions, starting
+                   2020 Q1                                 3                Rural
+Education level    Respondent level of     educatn1        1                No schooling
+                   education
+                                                           2                Grade school
+                                                           3                Middle school
+                                                           4                High school
+                                                           5                College
+                                                           98               Residue
+                            NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Victimization
+Descriptive name     Short description       Variable name    Values          Value labels
+Education level      Respondent level of     educatn2         -1              Invalid until 2003 Q1
+                     education, starting
+                     2003 Q1                                  1               No schooling
+                                                              2               Grade school
+                                                              3               Middle school
+                                                              4               Some high school
+                                                              5               High school graduate
+                                                              6               Some college and
+                                                                              associate degree
+                                                              7               Bachelor’s degree
+                                                              8               Advanced degree
+                                                              98              Residue
+Veteran status       Respondent veteran      veteran          -2              Invalid until 2017 Q1
+                     status, asked of
+                     persons age 18 or                        -1              Under age 18
+                     older, starting in 2017                  0               Not a veteran
+                     Q1
+                                                              1               Veteran
+                                                              98              Residue
+Citizenship status   Respondent              citizen          -1              Invalid until 2017 Q1
+                     citizenship status,
+                     starting 2017 Q1                         1               Born U.S. citizen
+                                                              2               Naturalized citizen
+                                                              3               Non-U.S. Citizen
+                                                              98              Residue
+Aggregate type of    Aggregate type          newcrime         1               Violent crime
+crime                of crime; violent
+                     crime includes all                       2               Personal theft/larceny
+                     rape, sexual assault,
+                     robbery, assault
+Type of crime        Type of crime           newoff           1               Rape/sexual assault
+                                                              2               Robbery
+                                                              3               Aggravated assault
+                                                              4               Simple assault
+                                                              5               Personal theft/larceny
+Violent crime        Violent crime           seriousviolent   1               Violent crime
+excluding simple     excluding simple                                         excluding simple
+                     assault includes rape                                    assault
+assault              or sexual assault,                       2
+                     robbery, aggravated                                      Simple assault
+                     assault                                  3               Personal theft/larceny
+Reporting to         Specifies whether the notify             1               Yes
+police               crime was reported to
+                     police                                   2               No
+                                                              3               Do not know
+                                                              98              Residue
+                           NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Victimization
+Descriptive name    Short description        Variable name   Values          Value labels
+Victim services     Specifies whether        vicservices     1               Yes
+                    victims received
+                    any help or advice                       2               No
+                    from victim service                      3               Do not know
+                    agencies
+                                                             98              Residue
+Location of crime   Specifies where the    locationr         1               At or near victim’s
+                    victimization occurred                                   home
+                                                             2               At or near friend’s,
+                                                                             neighbor’s, or
+                                                                             relative’s home
+                                                             3               Commercial place,
+                                                                             parking lot, other
+                                                                             public area
+                                                             4               School
+                                                             5               Other location
+Victim-offender     Classification           direl           1               Intimates
+relationship        of respondent
+                    relationship to the                      2               Other relatives
+                    offender for crimes                      3               Well known/casual
+                    involving direct                                         acquaintance
+                    contact
+                                                             4               Strangers
+                                                             5               Do not know
+                                                                             relationship
+                                                             6               Do not know number
+                                                                             of offenders
+Presence of         Specifies whether        weapon          1               Yes
+weapon              a weapon was
+                    present during the                       2               No
+                    victimization                            3               Do not know if
+                                                                             offender had weapon
+Weapon category     Type of weapon           weapcat         0               No weapon
+                                                             1               Firearm
+                                                             2               Knife
+                                                             3               Other type weapon
+                                                             4               Type weapon
+                                                                             unknown
+                                                             5               Do not know if
+                                                                             offender had weapon
+Injury              Specifies whether        injury          0               Not injured
+                    bodily hurt or
+                    damage was                               1               Injured
+                    sustained by a victim
+                    as the result of
+                    criminal victimization
+Type of injury      Specifies the type       serious         1               No injury
+                    of bodily hurt or
+                    damage sustained by                      2               Serious injury
+                    respondent                               3               Minor injury
+                                                             4               Rape w/o other
+                                                                             injuries
+                                                             98              Residue
+                           NCVS Select – Personal Population and Personal Victimization Codebook
+
+
+NCVS Select – Personal Victimization
+Descriptive name    Short description       Variable name   Values           Value labels
+Medical treatment   Specifies whether       treatment       0                Not injured
+for physical        respondent received
+                    medical treatment for                   1                Not treated
+injuries            injuries from crime                     2                Treated at scene,
+                                                                             home, medical office,
+                                                                             or other location
+                                                            3                Do not know
+                                                            98               Residue
+Offender age        Offender age            offenderage     1                11 or younger
+                                                            2                12-17
+                                                            3                18-29
+                                                            4                30 or older
+                                                            5                Multiple offenders of
+                                                                             various ages
+                                                            98               Residue
+Offender sex        Offender sex            offendersex     1                Male
+                                                            2                Female
+                                                            3                Both male and female
+                                                                             offenders
+                                                            4                Unknown
+                                                            98               Residue
+Offender race/      Offender race/          offtracenew     -1               Invalid until 2012 Q1
+Hispanic origin     Hispanic origin,
+                    starting 2012 Q1                        1                Non-Hispanic white
+                                                            2                Non-Hispanic black
+                                                            3                Non-Hispanic
+                                                                             American Indian/
+                                                                             Alaska Native
+                                                            4                Non-Hispanic Asian/
+                                                                             Native Hawaiian/
+                                                                             Other Pacific Islander
+                                                            5                Non-Hispanic more
+                                                                             than one race
+                                                            6                Hispanic
+                                                            7                Unknown race/
+                                                                             Hispanic origin
+                                                            10               Mixed race group of
+                                                                             offenders
+                                                            11               Unknown number of
+                                                                             offenders
+Victimization       Annual victimization    wgtviccy        numeric          N/A
+weight              weight
+
+Series              Specifies whether       series          1                Not a series crime
+                    incident is a series
+                    crime                                   2                Series crime
+
+Series adjusted     Series adjusted         newwgt          numeric          N/A
+victimization       victimization weight
+weight
+

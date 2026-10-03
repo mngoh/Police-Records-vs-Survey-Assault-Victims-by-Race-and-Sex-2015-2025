@@ -1,0 +1,204 @@
+{
+ "survey, places of 250,000+": {
+  "intimate": {
+   "black_rate": 535,
+   "white_rate": 226,
+   "ratio": 2.37,
+   "cases_black": 92,
+   "cases_white": 85
+  },
+  "relative": {
+   "black_rate": 207,
+   "white_rate": 85,
+   "ratio": 2.45,
+   "cases_black": 33,
+   "cases_white": 41
+  },
+  "known": {
+   "black_rate": 681,
+   "white_rate": 571,
+   "ratio": 1.19,
+   "cases_black": 100,
+   "cases_white": 183
+  },
+  "stranger": {
+   "black_rate": 610,
+   "white_rate": 1341,
+   "ratio": 0.45,
+   "cases_black": 114,
+   "cases_white": 404
+  },
+  "all known relationships": {
+   "black_rate": 2033,
+   "white_rate": 2223,
+   "ratio": 0.91,
+   "cases_black": 339,
+   "cases_white": 713
+  }
+ },
+ "survey, US": {
+  "intimate": {
+   "black_rate": 378,
+   "white_rate": 312,
+   "ratio": 1.21,
+   "cases_black": 228,
+   "cases_white": 882
+  },
+  "relative": {
+   "black_rate": 166,
+   "white_rate": 164,
+   "ratio": 1.01,
+   "cases_black": 93,
+   "cases_white": 538
+  },
+  "known": {
+   "black_rate": 451,
+   "white_rate": 453,
+   "ratio": 1.0,
+   "cases_black": 262,
+   "cases_white": 1343
+  },
+  "stranger": {
+   "black_rate": 431,
+   "white_rate": 580,
+   "ratio": 0.74,
+   "cases_black": 244,
+   "cases_white": 1686
+  },
+  "all known relationships": {
+   "black_rate": 1426,
+   "white_rate": 1508,
+   "ratio": 0.95,
+   "cases_black": 827,
+   "cases_white": 4449
+  }
+ },
+ "survey, US, injured only": {
+  "intimate": {
+   "black_rate": 164,
+   "white_rate": 140,
+   "ratio": 1.17,
+   "cases_black": 111,
+   "cases_white": 402
+  },
+  "relative": {
+   "black_rate": 51,
+   "white_rate": 52,
+   "ratio": 0.98,
+   "cases_black": 31,
+   "cases_white": 166
+  },
+  "known": {
+   "black_rate": 67,
+   "white_rate": 76,
+   "ratio": 0.89,
+   "cases_black": 48,
+   "cases_white": 235
+  },
+  "stranger": {
+   "black_rate": 63,
+   "white_rate": 64,
+   "ratio": 0.99,
+   "cases_black": 34,
+   "cases_white": 148
+  },
+  "all known relationships": {
+   "black_rate": 346,
+   "white_rate": 332,
+   "ratio": 1.04,
+   "cases_black": 224,
+   "cases_white": 951
+  }
+ },
+ "survey, places of 250,000+, injured only": {
+  "intimate": {
+   "black_rate": 253,
+   "white_rate": 90,
+   "ratio": 2.81,
+   "cases_black": 48,
+   "cases_white": 38
+  },
+  "relative": {
+   "black_rate": 45,
+   "white_rate": 29,
+   "ratio": 1.52,
+   "cases_black": 12,
+   "cases_white": 15
+  },
+  "known": {
+   "black_rate": 117,
+   "white_rate": 77,
+   "ratio": 1.52,
+   "cases_black": 22,
+   "cases_white": 28
+  },
+  "stranger": {
+   "black_rate": 97,
+   "white_rate": 96,
+   "ratio": 1.02,
+   "cases_black": 17,
+   "cases_white": 27
+  },
+  "all known relationships": {
+   "black_rate": 512,
+   "white_rate": 292,
+   "ratio": 1.75,
+   "cases_black": 99,
+   "cases_white": 108
+  }
+ },
+ "police, 51 cities": {
+  "intimate": {
+   "black_rate": 1902,
+   "white_rate": 426,
+   "ratio": 4.47
+  },
+  "relative": {
+   "black_rate": 685,
+   "white_rate": 122,
+   "ratio": 5.6
+  },
+  "known": {
+   "black_rate": 835,
+   "white_rate": 193,
+   "ratio": 4.33
+  },
+  "stranger": {
+   "black_rate": 402,
+   "white_rate": 129,
+   "ratio": 3.11
+  },
+  "all known relationships": {
+   "black_rate": 3825,
+   "white_rate": 870,
+   "ratio": 4.39
+  }
+ },
+ "police, DC": {
+  "intimate": {
+   "black_rate": 1690,
+   "white_rate": 102,
+   "ratio": 16.55
+  },
+  "relative": {
+   "black_rate": 640,
+   "white_rate": 12,
+   "ratio": 55.58
+  },
+  "known": {
+   "black_rate": 1395,
+   "white_rate": 72,
+   "ratio": 19.36
+  },
+  "stranger": {
+   "black_rate": 225,
+   "white_rate": 81,
+   "ratio": 2.78
+  },
+  "all known relationships": {
+   "black_rate": 3950,
+   "white_rate": 267,
+   "ratio": 14.82
+  }
+ }
+}

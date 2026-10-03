@@ -1,0 +1,9 @@
+{
+ "api": "https://api.ojp.gov/bjsdataset/v1/gcuy-rt5g",
+ "select": "all columns",
+ "where": "all rows",
+ "rows": 68852,
+ "fetched_at": "2026-10-03T11:08:07",
+ "sha256": "539a7309fc2ccdd836c67fcb8003c99822cc79a7b02e686d5f9189edbdcd8936",
+ "source": "Bureau of Justice Statistics, National Crime Victimization Survey, NCVS Select person-level files, as received"
+}

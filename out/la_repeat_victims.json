@@ -1,0 +1,59 @@
+{
+ "groups": {
+  "Black": {
+   "reports": 22697,
+   "with_usable_address": 19750,
+   "share_true_match": 40.5,
+   "share_placebo_match": 21.8,
+   "share_of_matches_real": 46.1,
+   "merged_reports": 4793,
+   "est_women": 20487,
+   "reports_per_woman": 1.108
+  },
+  "White": {
+   "reports": 12952,
+   "with_usable_address": 11078,
+   "share_true_match": 27.3,
+   "share_placebo_match": 9.4,
+   "share_of_matches_real": 65.7,
+   "merged_reports": 1773,
+   "est_women": 11787,
+   "reports_per_woman": 1.099
+  },
+  "Hispanic": {
+   "reports": 42263,
+   "with_usable_address": 36547,
+   "share_true_match": 36.0,
+   "share_placebo_match": 19.9,
+   "share_of_matches_real": 44.7,
+   "merged_reports": 7491,
+   "est_women": 38916,
+   "reports_per_woman": 1.086
+  },
+  "Asian": {
+   "reports": 1713,
+   "with_usable_address": 1543,
+   "share_true_match": 12.8,
+   "share_placebo_match": 4.4,
+   "share_of_matches_real": 65.9,
+   "merged_reports": 109,
+   "est_women": 1641,
+   "reports_per_woman": 1.044
+  }
+ },
+ "multiplier_on_ratio": {
+  "White": 0.992,
+  "Hispanic": 0.98,
+  "Asian": 0.942
+ },
+ "ratio_reports_la_page": {
+  "White": 5.7,
+  "Hispanic": 2.86,
+  "Asian": 18.36
+ },
+ "ratio_women_implied": {
+  "White": 5.65,
+  "Hispanic": 2.8,
+  "Asian": 17.3
+ }
+}

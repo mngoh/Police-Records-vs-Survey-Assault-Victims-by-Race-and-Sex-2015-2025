@@ -1,0 +1,9 @@
+{
+ "api": "https://api.ojp.gov/bjsdataset/v1/r4j4-fdwx",
+ "select": "idper,yearq,year,ager,sex,hispanic,race,race_ethnicity,msa,popsize,region,locality,wgtpercy",
+ "where": "year >= '2015'",
+ "rows": 2519055,
+ "fetched_at": "2026-10-03T11:15:52",
+ "sha256": "255bfc2caefb9b9b4392418f9e0d059ab2b0016a5cec5fee378825affd9f71b5",
+ "source": "Bureau of Justice Statistics, National Crime Victimization Survey, NCVS Select person-level files, as received"
+}
