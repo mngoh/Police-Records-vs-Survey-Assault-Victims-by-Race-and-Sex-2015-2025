@@ -2,3 +2,7 @@
 data/raw/*.csv
 __pycache__/
 .DS_Store
+# the NHAMCS 2022 file is 38 MB; unzip data/nhamcs/wb_ed2022-stata.zip
+data/nhamcs/*.dta
+data/nhamcs/ed2022
+data/nhamcs/ed2022.zip

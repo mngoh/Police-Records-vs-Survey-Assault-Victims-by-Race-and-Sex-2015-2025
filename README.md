@@ -55,9 +55,17 @@ In every city the within-band ratio of Black to White women's recorded rates is 
 
 ## Emergency departments see the police gap, not the survey's
 
-Hospital records do not depend on anyone calling the police. The National Center for Health Statistics reports emergency department visits for assault (ICD-10 X92 to Y09, excluding sexual assault) at 13.8 per 1,000 a year for Black non-Hispanic people, 4.6 for Hispanic and 3.1 for White non-Hispanic people over 2019 to 2021, a 4.5x gap, both sexes and all ages (NCHS Data Brief 481, National Hospital Ambulatory Medical Care Survey; 603 sampled visits, so the figures are rough, and no breakdown by race and sex together is published). Police records in the 59 cities put Black women's rate at about 3.8 times White women's and Black men's at about 3 times White men's. The emergency-room gap matches the police gap, not the survey's.
+Hospital records do not depend on anyone calling the police. The National Hospital Ambulatory Medical Care Survey samples emergency department visits nationally; a visit counts as an assault when any listed cause or diagnosis carries ICD-10 code X92 to Y09 (the definition in NCHS Data Brief 481, which reports 13.8 visits per 1,000 for Black non-Hispanic people against 3.1 for White over 2019 to 2021). From the 2022 public-use file (`out/nhamcs_ed.md`, `scripts/nhamcs_ed.py`), adults 18 and older, per 100,000 a year:
 
-That moves the weight of the evidence. Two independent systems, police and hospitals, agree on about 4x; the one source that puts it near 1 to 2x is the household survey, whose coverage of Black women is the weakest of the three.
+| | Black | White | Ratio (95% interval) |
+|---|---|---|---|
+| Women | 1,872 | 380 | 4.9x (3.0 to 8.2) |
+| Men | 2,361 | 438 | 5.4x (3.3 to 8.9) |
+| All ages, both sexes | 1,792 | 390 | 4.6x (3.3 to 6.3) |
+
+The cells are small (34 Black women's visits and 27 White women's sampled) and the intervals ignore the survey design, so the figures are rough. But the emergency-room gap for women is about 5x: the same size as the police gap, not the survey's 1 to 2x. The Hispanic cell is too small to use (6 visits).
+
+That moves the weight of the evidence. Two independent systems, police and hospitals, agree on 4 to 5x; the one source that puts it near 1 to 2x is the household survey, whose coverage of Black women is the weakest of the three.
 
 ## The survey
 
@@ -123,14 +131,14 @@ Two explanations are left, and each needs a dataset this project cannot reach. I
 |---|---|---|---|
 | Does the survey undercount assaults on Black women? | The restricted NCVS files, which carry the sample design and the non-respondents' Census characteristics, so victimization can be estimated by who did not answer and where they live | Federal Statistical Research Data Centers (Census Bureau), by approved proposal | A researcher with RDC access; about a year from proposal to result |
 | Who makes the call? | 911 records that say whether the caller was the victim, a bystander, a neighbor, a building or housing employee, or an alarm, joined to the recorded victim | Dispatch systems hold a caller type; few cities publish it. Ask the departments in New York, Baltimore, Chicago and Philadelphia for a one-year extract by call type and caller relationship, with no names | A records request to each department; weeks to months |
-| Does the gap exist in emergency rooms, by sex? | Assault injuries by patient race and sex together. NCHS reports 13.8 against 3.1 per 1,000 by race, both sexes (above); the public NHAMCS microdata could give it by sex, on a few dozen sampled visits a year | ftp.cdc.gov, NHAMCS emergency department files; HCUP state databases for larger samples, by purchase | Anyone, a day; HCUP for a fee |
+| Is the emergency-room gap for women precise? | The 2022 figure rests on 34 and 27 sampled visits. Pooling NHAMCS 2019 to 2023 would triple the sample; HCUP state databases hold every visit | ftp.cdc.gov NHAMCS files (the FTP stalls; the Internet Archive holds copies); HCUP by purchase | Anyone, a day; HCUP for a fee |
 | Are Black women in shelters and institutions counted anywhere? | Shelter intake counts by race and sex and reason, and hospital records from places the survey does not reach | HUD Homeless Management Information Systems (local continuums of care); hospital data as above | A records request to each city's continuum of care |
 | Does the recording effect vary by city? | The New York and Baltimore test in every city that publishes calls with a type and a location and victims with race: Seattle, Detroit, Nashville, Minneapolis, Denver and Philadelphia look possible | Each city's open-data portal | This pipeline, about a day a city |
 
 Next steps, in the order they pay off:
 
 1. Done: the calls test in Los Angeles and New Orleans (flat) and Baltimore (a small effect). The recording effect is local where it exists; Baltimore is the city to ask about.
-2. Done in part: the emergency-room gap by race is near 4, so the survey is the outlier. Still to do: by race and sex together, from the NHAMCS microdata.
+2. Done: the emergency-room gap is 4.9x for women (NHAMCS 2022), so the survey is the outlier.
 3. Write the one-page question for the restricted NCVS and offer it to a researcher with Research Data Center access. The question: among women who did not answer the survey, estimated from their block's characteristics, how much higher would the assault rate of Black women be?
 4. Ask one department for a caller-type extract. Baltimore, whose dispatch data is already published in detail, is the natural first ask.
 
@@ -162,4 +170,5 @@ python scripts/nyc_premises.py       # out/nyc_premises.json, out/nyc_premises.m
 python scripts/bmore_calls.py        # out/bmore_calls.json, out/bmore_calls.md (Baltimore calls and polygons in data/baltimore/; victims from ../Baltimore-Assault-Victims)
 python scripts/la_calls.py           # out/la_calls.json, out/la_calls.md (LAPD calls and reporting districts in data/la/; victims and tracts from ../LA-Crime)
 python scripts/nola_calls.py         # out/nola_calls.json, out/nola_calls.md (New Orleans calls and reports in data/nola/)
+python scripts/nhamcs_ed.py          # out/nhamcs_ed.json, out/nhamcs_ed.md (data/nhamcs/ed2022-stata.dta, from CDC's FTP via the Internet Archive)
 ```

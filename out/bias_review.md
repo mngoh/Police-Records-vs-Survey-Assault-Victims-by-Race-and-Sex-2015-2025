@@ -16,12 +16,12 @@ Focus: Black women. This screen finds candidates; read every flag in context bef
 Files: `README.md`
 
 ### README.md
-- **review: Causal claim** (`because`): "In every city the within-band ratio of Black to White women's recorded rates is largest in the whitest areas and smallest in the Blackest, because assaults are recorded where they happen and residents are counted where t..."  
-  The data shows rates, not causes. Keep causal words only in sentences that say a cause is not measured.
 - **review: Offender implication** (`offender`): "By the victim's relationship to the offender (`out/by_relationship.md`, `scripts/by_relationship.py`), women 18 and older:"  
   Victim data says nothing about who offended. Remove, or state that offenders are not in the data.
 - **review: Offender implication** (`offender`): "- Not the cause, tested in DC's records (the largest gap, 10.5x for women 18 and older): one assault producing several victim records. Counting one record per incident, leaving out mutual fights ("victim was offender"), ..."  
   Victim data says nothing about who offended. Remove, or state that offenders are not in the data.
+- **review: Essentializing phrasing** (`The Hispanic`): "The cells are small (34 Black women's visits and 27 White women's sampled) and the intervals ignore the survey design, so the figures are rough. But the emergency-room gap for women is about 5x: the same size as the poli..."  
+  Use groups as adjectives (Black women, White residents), never as nouns or as statements about what a group is.
 
 ### Required statements
 

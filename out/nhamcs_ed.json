@@ -1,0 +1,91 @@
+{
+ "year": 2022,
+ "assault_visits_sampled": 198,
+ "assault_visits_weighted": 1918933,
+ "cells": {
+  "White women": {
+   "sampled_visits": 27,
+   "weighted_visits": 303931,
+   "residents_18plus": 79980061,
+   "rate_per_100k": 380
+  },
+  "White men": {
+   "sampled_visits": 29,
+   "weighted_visits": 339464,
+   "residents_18plus": 77570710,
+   "rate_per_100k": 438
+  },
+  "White, all ages and both sexes": {
+   "sampled_visits": 70,
+   "weighted_visits": 749978,
+   "residents": 192214380,
+   "rate_per_100k": 390
+  },
+  "Black women": {
+   "sampled_visits": 34,
+   "weighted_visits": 308286,
+   "residents_18plus": 16466603,
+   "rate_per_100k": 1872
+  },
+  "Black men": {
+   "sampled_visits": 33,
+   "weighted_visits": 345870,
+   "residents_18plus": 14646758,
+   "rate_per_100k": 2361
+  },
+  "Black, all ages and both sexes": {
+   "sampled_visits": 79,
+   "weighted_visits": 733256,
+   "residents": 40919548,
+   "rate_per_100k": 1792
+  },
+  "Hispanic women": {
+   "sampled_visits": 6,
+   "weighted_visits": 63346,
+   "residents_18plus": 22543484,
+   "rate_per_100k": 281
+  },
+  "Hispanic men": {
+   "sampled_visits": 32,
+   "weighted_visits": 228908,
+   "residents_18plus": 22913688,
+   "rate_per_100k": 999
+  },
+  "Hispanic, all ages and both sexes": {
+   "sampled_visits": 42,
+   "weighted_visits": 323832,
+   "residents": 64759368,
+   "rate_per_100k": 500
+  }
+ },
+ "ratios": {
+  "Black women vs White women": {
+   "ratio": 4.93,
+   "ci95": [
+    2.97,
+    8.16
+   ]
+  },
+  "Black women vs Hispanic women": {
+   "ratio": 6.66,
+   "ci95": [
+    2.8,
+    15.87
+   ]
+  },
+  "Black men vs White men": {
+   "ratio": 5.39,
+   "ci95": [
+    3.27,
+    8.88
+   ]
+  },
+  "Black vs White, all ages and both sexes": {
+   "ratio": 4.59,
+   "ci95": [
+    3.33,
+    6.34
+   ]
+  }
+ }
+}
