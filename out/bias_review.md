@@ -20,8 +20,6 @@ Files: `README.md`
   Victim data says nothing about who offended. Remove, or state that offenders are not in the data.
 - **review: Offender implication** (`offender`): "- Not the cause, tested in DC's records (the largest gap, 10.5x for women 18 and older): one assault producing several victim records. Counting one record per incident, leaving out mutual fights ("victim was offender"), ..."  
   Victim data says nothing about who offended. Remove, or state that offenders are not in the data.
-- **review: Essentializing phrasing** (`The Hispanic`): "The cells are small (34 Black women's visits and 27 White women's sampled) and the intervals ignore the survey design, so the figures are rough. But the emergency-room gap for women is about 5x: the same size as the poli..."  
-  Use groups as adjectives (Black women, White residents), never as nouns or as statements about what a group is.
 
 ### Required statements
 
