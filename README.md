@@ -1,8 +1,25 @@
 # Police records against the survey: assault victims by race and sex, 2015 to 2025
 
-**Police record assaults on Black women about 4 times as often as on White women, in every large US city. Women's own accounts in the national victimization survey put the difference at about 1 to 2 times. Most of the gap between the two is where assaults happen and who calls, not how police record them.**
+**Police write up the same share of victims per 911 assault call in every New York neighborhood, whatever its racial makeup. The 4x gap in police-recorded assaults on Black women is already there when the phone rings. Women's own accounts in the national victimization survey put the difference at about 1 to 2 times; most of the rest is where assaults happen and who calls, not how police record them.**
 
 The national run ([US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025](https://github.com/mngoh/US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025)) found the police gap. This asks what it measures, with four tests: the National Crime Victimization Survey, which counts assaults whether or not police learned of them; DC's records, for one assault becoming several; Los Angeles's, for the same women counted repeatedly; and New York's 911 calls against its recorded victims, by precinct, for the recording stage. The scripts read the national run's outputs and the [LA-Crime](https://github.com/mngoh/LA-Crime) project from sibling folders.
+
+## New York: the gap is in the calls, not in the recording
+
+New York publishes 911 calls by type and precinct, recorded complaints with victim race and sex, and precinct boundaries, so the recording stage can be tested (`out/nyc_calls.md`, `scripts/nyc_calls.py`; 77 precincts, 2022 to 2025, 525,000 assault calls, 294,000 recorded assault victims).
+
+| Precincts by Black share of residents | Assault calls per 1,000 residents a year | Recorded victims per 1,000 | Victims recorded per call | Black women's rate | White women's rate | Ratio |
+|---|---|---|---|---|---|---|
+| 1% to 3% | 7.4 | 4.6 | 0.62 | 1,880 | 248 | 7.6x |
+| 3% to 7% | 13.4 | 7.5 | 0.56 | 2,328 | 292 | 8.0x |
+| 7% to 23% | 15.6 | 8.8 | 0.56 | 1,963 | 328 | 6.0x |
+| 24% to 38% | 22.5 | 12.7 | 0.57 | 1,782 | 493 | 3.6x |
+| 41% to 81% | 20.5 | 10.9 | 0.54 | 1,246 | 437 | 2.9x |
+
+- Police record about 0.55 to 0.62 victims per assault call everywhere. At the same number of calls and residents, a wholly Black precinct records 1.07 times the victims of one with no Black residents (regression coefficient 0.06, standard error 0.07). The gap does not come from what police write down after a call; it is in the calls.
+- Calls per resident are 2.8 times higher in the Blackest precincts than the whitest. That is a difference between places, not a measurement of any group.
+- Black women's rate is highest in the whitest precincts (Manhattan's), where few Black women live: assaults are recorded where they happen, residents are counted where they live. Within the Blackest precincts, where Black and White women are neighbors, the gap is 2.9x, not the citywide 5.2x.
+- By place (`out/nyc_premises.md`): public housing holds 17% of the recorded assaults on Black women and 3% of those on White women, with a 29x ratio there; outside public housing the ratio is 4.5x. On the street it is 4.0x, in apartment buildings 5.2x, in shelters 8.2x. No single kind of place carries the gap.
 
 ## The survey
 
@@ -40,23 +57,6 @@ By the victim's relationship to the offender (`out/by_relationship.md`, `scripts
 - Not the cause, tested in Los Angeles (`out/la_repeat_victims.md`): the same women reported again and again. Matching reports by block address, descent and birth year (net of chance matches, measured with a placebo of birth years 5 to 7 apart), Black and White women both average about 1.1 reports each over 2020 to 2023, and counting women instead of reports moves the ratio against White women from 5.7x to 5.65x. The matching misses women who moved or whose address is missing, but there is no sign it misses them more in one group.
 - Possible, not proven: the survey under-reaching Black women. Each Black woman who answers stands in for 1.25 times as many women as each White woman who answers (1.15 in 2015, 1.32 in 2024). Weighting restores the count, but not whether those who answer were assaulted as often as those who do not. Hispanic and Asian women are weighted up about as much, so this alone does not single out Black women.
 - Not testable with DC's public data: calls against recorded incidents (DC publishes no incident-level 911 data) and repeat victimization of the same women (no person or address link to victims).
-
-## New York: the gap is in the calls, not in the recording
-
-New York publishes 911 calls by type and precinct, recorded complaints with victim race and sex, and precinct boundaries, so the recording stage can be tested (`out/nyc_calls.md`, `scripts/nyc_calls.py`; 77 precincts, 2022 to 2025, 525,000 assault calls, 294,000 recorded assault victims).
-
-| Precincts by Black share of residents | Assault calls per 1,000 residents a year | Recorded victims per 1,000 | Victims recorded per call | Black women's rate | White women's rate | Ratio |
-|---|---|---|---|---|---|---|
-| 1% to 3% | 7.4 | 4.6 | 0.62 | 1,880 | 248 | 7.6x |
-| 3% to 7% | 13.4 | 7.5 | 0.56 | 2,328 | 292 | 8.0x |
-| 7% to 23% | 15.6 | 8.8 | 0.56 | 1,963 | 328 | 6.0x |
-| 24% to 38% | 22.5 | 12.7 | 0.57 | 1,782 | 493 | 3.6x |
-| 41% to 81% | 20.5 | 10.9 | 0.54 | 1,246 | 437 | 2.9x |
-
-- Police record about 0.55 to 0.62 victims per assault call everywhere. At the same number of calls and residents, a wholly Black precinct records 1.07 times the victims of one with no Black residents (regression coefficient 0.06, standard error 0.07). The gap does not come from what police write down after a call; it is in the calls.
-- Calls per resident are 2.8 times higher in the Blackest precincts than the whitest. That is a difference between places, not a measurement of any group.
-- Black women's rate is highest in the whitest precincts (Manhattan's), where few Black women live: assaults are recorded where they happen, residents are counted where they live. Within the Blackest precincts, where Black and White women are neighbors, the gap is 2.9x, not the citywide 5.2x.
-- By place (`out/nyc_premises.md`): public housing holds 17% of the recorded assaults on Black women and 3% of those on White women, with a 29x ratio there; outside public housing the ratio is 4.5x. On the street it is 4.0x, in apartment buildings 5.2x, in shelters 8.2x. No single kind of place carries the gap.
 
 ## What this does and does not say
 
