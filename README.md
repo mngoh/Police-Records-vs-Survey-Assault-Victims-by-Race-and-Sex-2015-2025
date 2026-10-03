@@ -63,7 +63,7 @@ Hospital records do not depend on anyone calling the police. The National Hospit
 | Men | 2,361 | 438 | 5.4x (3.3 to 8.9) |
 | All ages, both sexes | 1,792 | 390 | 4.6x (3.3 to 6.3) |
 
-The cells are small (34 Black women's visits and 27 White women's sampled) and the intervals ignore the survey design, so the figures are rough. But the emergency-room gap for women is about 5x: the same size as the police gap, not the survey's 1 to 2x. The Hispanic cell is too small to use (6 visits).
+The cells are small (34 Black women's visits and 27 White women's sampled) and the intervals ignore the survey design, so the figures are rough. But the emergency-room gap for women is about 5x: the same size as the police gap, not the survey's 1 to 2x. The cell for Hispanic women is too small to use (6 visits).
 
 That moves the weight of the evidence. Two independent systems, police and hospitals, agree on 4 to 5x; the one source that puts it near 1 to 2x is the household survey, whose coverage of Black women is the weakest of the three.
 
