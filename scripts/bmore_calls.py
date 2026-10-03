@@ -2,7 +2,7 @@
 
 Baltimore publishes 911 calls with a description and the neighborhood (ArcGIS services CallsForService_2022,
 911_CallsForService_2023, 911_CallsForService_PreviousYear_Present, grouped server-side into data/baltimore/calls_<year>.json),
-victim-based crime records with race, sex, age and neighborhood (the Baltimore-Assault-Victims project's copy of
+victim-based crime records with race, sex, age and neighborhood (the Baltimore-MD-Assault-Victim-Rates-by-Race-and-Sex-2022-2024 project's copy of
 Part1_Crime_Beta, cut to assaults in data/baltimore/victims_assault_2022_2024.csv), and neighborhood polygons
 (data/baltimore/neighborhoods.geojson). Residents by group come from the national run's ACS tract cache, tracts
 assigned to neighborhoods by centroid.

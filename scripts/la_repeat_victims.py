@@ -1,7 +1,7 @@
 """Do police records count the same women again and again? Repeat victims in Los Angeles, 2020 to 2023.
 
 Police records count reports; the survey counts people (and caps one person's repeated victimizations at 10). LAPD's
-pre-NIBRS records (the LA-Crime project's eda_data.csv and eda_data_deadly.csv: simple and aggravated assault, codes
+pre-NIBRS records (the Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023 project's eda_data.csv and eda_data_deadly.csv: simple and aggravated assault, codes
 624, 626, 230 and 236) carry the victim's age, sex and descent and the block address, but no person identifier.
 
 A repeat is approximated: two reports at the same block address involving women of the same descent whose birth
@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LA = ROOT.parent / "LA-Crime"
+LA = ROOT.parent / "Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023"
 GROUPS = {"B": "Black", "W": "White", "H": "Hispanic", "A": "Asian"}
 
 

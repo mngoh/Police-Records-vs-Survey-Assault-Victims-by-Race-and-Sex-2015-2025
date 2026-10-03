@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What the assault-victim gap measures</title>
+  <meta name="description" content="Police record assaults on Black women about 4.2 times as often as on White women across large US cities, and hospital emergency departments see a gap of the same size (4.6 times for women). Only the national victimization survey, in which women describe their own assaults, puts it near 1. The police gap is not an artifact of policing: in 3 of 4 cities police write up the same share of victims per 911 assault call whatever a neighborhood&#x27;s racial makeup." />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0a0a0a; --surface: #121212; --border: #262626; --text: #f2f2f2; --muted: #8b8b8b; --blue: #2563eb; --blue-light: #93c5fd; --red: #ef4444; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; }
+    a { color: var(--blue-light); text-decoration: none; } a:hover { text-decoration: underline; }
+    header { border-bottom: 1px solid var(--border); padding: 28px 40px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+    header h1 { font-size: 22px; font-weight: 600; letter-spacing: -0.3px; }
+    header p { color: var(--muted); margin-top: 4px; font-size: 13px; }
+    header nav { display: flex; gap: 20px; font-size: 13px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 32px 40px; }
+    .lede { font-size: 21px; font-weight: 600; line-height: 1.4; letter-spacing: -0.2px; max-width: 860px; margin-bottom: 24px; }
+    .answer { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 40px; max-width: 860px; }
+    .answer .q { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+    .answer .question { font-size: 15px; line-height: 1.7; margin-bottom: 8px; }
+    .answer p { font-size: 14px; line-height: 1.7; color: var(--muted); }
+    .answer p + p { margin-top: 8px; }
+    .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .note { font-size: 12px; color: var(--muted); margin: -6px 0 16px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; }
+    .card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 8px; }
+    .card .value { font-size: 26px; font-weight: 700; line-height: 1; }
+    .card .sub { font-size: 11px; color: var(--muted); margin-top: 5px; }
+    .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .section-end { margin-bottom: 40px; }
+    .chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 22px 24px; min-width: 0; }
+    .chart-box h3 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .chart-sub { font-size: 11px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+    .chart-wrap { position: relative; height: 270px; }
+    .chart-wrap.tall { height: 360px; }
+    .findings { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px; }
+    .finding { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 0 8px 8px 0; padding: 16px 20px; }
+    .finding.red { border-left-color: var(--red); }
+    .finding h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .finding p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    footer { border-top: 1px solid var(--border); padding: 20px 40px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 768px) {
+      header, footer { padding: 20px 16px; } .container { padding: 20px 16px; }
+      .charts, .findings { grid-template-columns: 1fr; }
+      .chart-box { padding: 18px 16px; } .lede { font-size: 18px; }
+    }
+
+    .pts { margin: 6px 0 0 18px; color: var(--muted); font-size: 14px; line-height: 1.7; } .pts li + li { margin-top: 4px; }
+    .tbl-wrap { overflow-x: auto; margin-bottom: 24px; border: 1px solid var(--border); border-radius: 8px; }
+    .tbl { border-collapse: collapse; width: 100%; font-size: 12px; }
+    .tbl th, .tbl td { padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    .tbl th { color: var(--muted); font-weight: 600; font-size: 11px; } .tbl tr:last-child td { border-bottom: none; }
+    .tbl td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .limits { margin: 0 0 40px 18px; color: var(--muted); font-size: 13px; line-height: 1.6; max-width: 900px; }
+    .limits li + li { margin-top: 6px; } .limits strong { color: var(--text); font-weight: 600; }
+  </style>
+</head>
+<body>
+<header>
+  <div><h1>What the assault-victim gap measures</h1><p>2015 to 2025 · three sources · Martin Ngoh</p></div>
+  <nav><a href="https://mngoh.github.io/US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025/">The 59-city page</a><a href="https://github.com/mngoh/Police-Records-vs-Survey-Assault-Victims-by-Race-and-Sex-2015-2025">Code</a><a href="https://martinngoh.com">martinngoh.com</a></nav>
+</header>
+<div class="container">
+  <p class="lede">Police record assaults on Black women about 4.2 times as often as on White women across large US cities, and hospital emergency departments see a gap of the same size (4.6 times for women). Only the national victimization survey, in which women describe their own assaults, puts it near 1. The police gap is not an artifact of policing: in 3 of 4 cities police write up the same share of victims per 911 assault call whatever a neighborhood&#x27;s racial makeup.</p>
+  <div class="answer"><div class="q">The question</div><div class="question">Is the 4x gap in police-recorded assaults on Black women a fact about assaults, about reporting, or about how police record?</div><ul class="pts"><li>Reporting is not it: Black women report 54% of their assaults to police, White women 47%, which lifts the survey&#x27;s ratio only to about 1.4 in large places.</li><li>Recording is not it: victims per 911 assault call are flat across neighborhoods in New York, Los Angeles, New Orleans, and rise only a little in Baltimore (1.2 times at most).</li><li>Repeat counting is not it: in Los Angeles, Black and White women both average about 1.1 police reports each; counting women instead of reports moves the ratio from 5.7 to 5.65.</li><li>Hospitals agree with police: emergency department visits for assault run 4.6 times higher for Black women than White women (interval 3.25 to 6.61), with no call to police involved.</li><li>What remains open is why the survey sees so little of it. Each Black woman who answers stands in for a quarter more women than each White woman who answers, and the survey does not reach shelters or institutions.</li></ul></div>
+  <div class="section-title">At a glance</div>
+  <div class="cards"><div class="card"><div class="label">Police records</div><div class="value">4.2x</div><div class="sub">Black women&#x27;s rate over White women&#x27;s, 51 cities</div></div><div class="card"><div class="label">Hospital emergency departments</div><div class="value">4.6x</div><div class="sub">assault visits, women 18+, 2021 to 2022</div></div><div class="card"><div class="label">Victimization survey</div><div class="value">1x</div><div class="sub">women&#x27;s own accounts, US (1x in large places)</div></div><div class="card"><div class="label">Cities where recording adds nothing</div><div class="value">3 of 4</div><div class="sub">victims per 911 call flat across neighborhoods</div></div></div>
+  <div class="charts section-end" style="grid-template-columns:1fr"><div class="chart-box"><h3>Three sources, one comparison</h3><div class="chart-sub">Black women&#x27;s assault rate over White women&#x27;s, adults. Bars at 1 would mean no gap.</div><div class="chart-wrap" style="height:230px"><canvas id="sources" role="img" aria-label="Three sources, one comparison"></canvas></div><p class="note" style="margin-top:12px">Police and hospitals agree; the survey is the outlier. Survey intervals assume a design effect of 2.</p></div></div><div class="charts section-end"><div class="chart-box"><h3>What police write up per call</h3><div class="chart-sub">Flat lines mean police record the same share of victims whatever the neighborhood. New York: +0.06 (SE 0.065), Los Angeles: +0.08 (SE 0.107), New Orleans: -0.00 (SE 0.119), Baltimore: +0.20 (SE 0.07).</div><div class="chart-wrap" style="height:300px"><canvas id="vpc" role="img" aria-label="What police write up per call"></canvas></div></div><div class="chart-box"><h3>Where the calls come from</h3><div class="chart-sub">Assault calls per resident rise with a neighborhood&#x27;s Black share: New York 2.77x, Los Angeles 2.1x, New Orleans 1.78x, Baltimore 2.32x. The gap is already there when the phone rings.</div><div class="chart-wrap" style="height:300px"><canvas id="cpr" role="img" aria-label="Where the calls come from"></canvas></div></div></div>
+  <div class="section-title">Testing explanations</div>
+  <div class="charts section-end" style="grid-template-columns:1fr"><div class="chart-box"><h3>By who did it</h3><div class="chart-sub">Survey and police, women 18 and older. The police gap is larger in every relationship category, so no one kind of assault carries it.</div><div class="chart-wrap" style="height:300px"><canvas id="rel" role="img" aria-label="By who did it"></canvas></div></div></div><div class="section-title">Every explanation tested</div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Could the police gap be...</th><th>Tested in</th><th>Answer</th></tr></thead><tbody><tr><td>Black women report assaults more often</td><td>Survey</td><td>A little: 54% against 47%; lifts the survey ratio to about 1.4, not 4</td></tr><tr><td>Survey counts threats as assaults</td><td>Survey, injury only</td><td>No: with an injury required the ratio is 1 nationally</td></tr><tr><td>One assault becomes several records</td><td>DC</td><td>No: 10.4x to 10.7x however records are counted</td></tr><tr><td>The same women reported again and again</td><td>Los Angeles</td><td>No: 1.11 and 1.10 reports per woman; ratio 5.7 to 5.65</td></tr><tr><td>Police write up more victims per call in Black neighborhoods</td><td>New York, Los Angeles, New Orleans, Baltimore</td><td>Flat in New York, Los Angeles, New Orleans; up to 1.2x in Baltimore</td></tr><tr><td>Public housing and shelters</td><td>New York</td><td>Partly: 17% of recorded assaults on Black women are in public housing against 3% of those on White women; outside it the ratio is 4.5x, not 5.2x</td></tr><tr><td>Assaults recorded where they happen, residents counted where they live</td><td>New York</td><td>Large: within the Blackest precincts the gap is 2.7x, citywide 5.2x</td></tr><tr><td>Hospitals see what police see</td><td>NHAMCS</td><td>Yes: 4.6x for women, 4.3x for men</td></tr></tbody></table></div>
+  <div class="section-title">The cities</div><p class="note">Each city publishes 911 calls with a type and a place, and recorded victims with race. New Orleans joins each call to the report it produced by item number.</p><div class="tbl-wrap"><table class="tbl"><thead><tr><th>City</th><th>Unit</th><th>Victims per call, whitest to Blackest fifth</th><th>Recording effect</th><th>Calls per resident, Blackest over whitest</th></tr></thead><tbody><tr><td>New York</td><td>77 precincts</td><td class="num">0.622 to 0.535</td><td class="num">1.07 (SE 0.065)</td><td class="num">2.77x</td></tr><tr><td>Los Angeles</td><td>680 districts</td><td class="num">0.887 to 0.844</td><td class="num">1.09 (SE 0.107)</td><td class="num">2.1x</td></tr><tr><td>New Orleans</td><td>17 zips</td><td class="num">0.988 to 1.065</td><td class="num">1.00 (SE 0.119)</td><td class="num">1.78x</td></tr><tr><td>Baltimore</td><td>133 neighborhoods</td><td class="num">0.371 to 0.404</td><td class="num">1.22 (SE 0.07)</td><td class="num">2.32x</td></tr></tbody></table></div><div class="section-title">Emergency departments, 2021 to 2022</div><p class="note">NHAMCS public-use files, assault codes X92 to Y09, adults, per 100,000 a year. 60 Black women&#x27;s and 62 White women&#x27;s visits sampled; intervals ignore the survey design.</p><div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Black</th><th>White</th><th>Hispanic</th><th>Black vs White (95% interval)</th></tr></thead><tbody><tr><td>Women</td><td class="num">1,654</td><td class="num">357</td><td class="num">337</td><td class="num">4.63 (3.25 to 6.61)</td></tr><tr><td>Men</td><td class="num">1,857</td><td class="num">436</td><td class="num">728</td><td class="num">4.26 (3.01 to 6.04)</td></tr></tbody></table></div>
+  
+  
+  
+  <div class="section-title">Method</div>
+  <p class="note">Survey: BJS NCVS Select files, women 18 and older, aggravated and simple assault, series-adjusted weights, 2015 to 2024. Hospitals: NHAMCS 2021 and 2022 emergency department files. Police: the 59-city run&#x27;s victim files and ACS populations. Calls: each city&#x27;s open data, grouped by neighborhood, residents from ACS tracts assigned by centroid. Generated by scripts/build_page.py from out/*.json; the README holds every table.</p>
+  <div class="section-title">Limits</div><ul class="limits"><li><strong>Small survey cells.</strong> 919 Black women assault victims in the survey over ten years; the hospital figure rests on 60 sampled visits. Intervals are approximate.</li><li><strong>Definitions differ.</strong> Survey simple assault includes threats; police and hospital counts do not. The injury-only checks address this.</li><li><strong>Place is not residence.</strong> Assaults are recorded where they happen and residents counted where they live, so the within-neighborhood ratios are rough too.</li><li><strong>Race recorded three ways.</strong> By officers in police data, by respondents in the survey, by hospital staff in NHAMCS. The race-coding bound from the national run applies to the police side.</li><li><strong>What is left open.</strong> Why the survey sees so little: non-response, coverage of shelters and institutions, or what women say at home. And who makes the calls. Neither can be settled with public data.</li><li><strong>What, not why.</strong> Nothing here measures causes, offenders or circumstances.</li></ul>
+</div>
+<footer>What the assault-victim gap measures · Martin Ngoh</footer>
+<script>
+  const C = { blue: '#2563eb', blueLight: '#93c5fd', red: '#ef4444', text: '#f2f2f2', muted: '#8b8b8b', grey2: '#6b7280', grey3: '#4b5563', grey4: '#374151', border: '#262626', surface: '#121212' };
+  Chart.defaults.color = C.muted; Chart.defaults.borderColor = C.border;
+  Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'; Chart.defaults.font.size = 11;
+  Object.assign(Chart.defaults.plugins.tooltip, { backgroundColor: C.surface, borderColor: C.border, borderWidth: 1, titleColor: C.text, bodyColor: C.muted });
+  Chart.defaults.plugins.legend.labels.boxWidth = 12;
+  const base = { responsive: true, maintainAspectRatio: false };
+  const bar = c => ({ backgroundColor: 'transparent', borderColor: c, borderWidth: 1.5, borderRadius: 3, borderSkipped: false });
+  const line = c => ({ borderColor: c, backgroundColor: c, borderWidth: 1.5, pointRadius: 2.5, tension: 0.25, fill: false });
+  const WHITE = '#0b9fd0';
+  const dot = c => ({ borderColor: C.surface, backgroundColor: c, borderWidth: 2, pointRadius: 5, pointHoverRadius: 7, pointHitRadius: 12, showLine: false });
+  Chart.register({ id: 'refLines', beforeDatasetsDraw(chart, args, o) {
+    const { ctx, chartArea: a, scales: { x, y } } = chart; if (!o || (!o.x && !o.y)) return;
+    ctx.save(); ctx.strokeStyle = C.grey2; ctx.lineWidth = 1;
+    if (o.x) { const px = x.getPixelForValue(o.x); ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke();
+      if (o.label) { ctx.fillStyle = C.muted; ctx.font = '10px -apple-system, Segoe UI, Helvetica, Arial, sans-serif'; ctx.fillText(o.label, px + 4, a.top - 5); } }
+    if (o.y) { const py = y.getPixelForValue(o.y); ctx.beginPath(); ctx.moveTo(a.left, py); ctx.lineTo(a.right, py); ctx.stroke(); }
+    ctx.restore(); } });
+  new Chart(document.getElementById('sources'),{type:'bar',data:{labels:["Police records, 51 cities, 2022 to 2025", "Hospital emergency departments, US, 2021 to 2022", "Victimization survey, large places, 2015 to 2024", "Victimization survey, US, 2015 to 2024"],datasets:[{label:'Black women\'s rate over White women\'s',data:[[0, 4.19], [0, 4.63], [0, 0.96], [0, 0.98]],...bar(C.red),maxBarThickness:18}]},options:{...base,indexAxis:'y',layout:{padding:{top:16}},plugins:{legend:{display:false},refLines:{x:1,label:'1 = no gap'},tooltip:{callbacks:{label:c=>({"Police records, 51 cities, 2022 to 2025": "4.19x", "Hospital emergency departments, US, 2021 to 2022": "4.63x, 95% interval 3.25 to 6.61", "Victimization survey, large places, 2015 to 2024": "0.96x, 95% interval 0.65 to 1.33", "Victimization survey, US, 2015 to 2024": "0.98x, 95% interval 0.8 to 1.2"})[c.label]}}},scales:{y:{grid:{display:false},ticks:{color:C.text,autoSkip:false}},x:{min:0,suggestedMax:6,title:{display:true,text:'Times White women\'s rate'}}}}});
+  new Chart(document.getElementById('vpc'),{type:'line',data:{labels:["whitest fifth", "2nd", "3rd", "4th", "Blackest fifth"],datasets:[{label:"New York",data:[0.622, 0.557, 0.564, 0.565, 0.535],...dot(C.red),showLine:true,borderColor:C.red,borderWidth:2,pointRadius:4},{label:"Los Angeles",data:[0.887, 0.836, 0.866, 0.844, 0.844],...dot(C.blue),showLine:true,borderColor:C.blue,borderWidth:2,pointRadius:4},{label:"New Orleans",data:[0.988, 1.071, 1.075, 0.936, 1.065],...dot(WHITE),showLine:true,borderColor:WHITE,borderWidth:2,pointRadius:4},{label:"Baltimore",data:[0.371, 0.372, 0.373, 0.415, 0.404],...dot(C.muted),showLine:true,borderColor:C.muted,borderWidth:2,pointRadius:4}]},options:{...base,plugins:{legend:{display:true,labels:{usePointStyle:true}}},scales:{y:{min:0,suggestedMax:1.2,title:{display:true,text:'Recorded victims per 911 assault call'}},x:{grid:{display:false},title:{display:true,text:'Neighborhoods by Black share of residents'}}}}});
+  new Chart(document.getElementById('cpr'),{type:'line',data:{labels:["whitest fifth", "2nd", "3rd", "4th", "Blackest fifth"],datasets:[{label:"New York",data:[1.0, 1.81, 2.11, 3.04, 2.77],...dot(C.red),showLine:true,borderColor:C.red,borderWidth:2,pointRadius:4},{label:"Los Angeles",data:[1.0, 1.08, 1.18, 1.33, 2.1],...dot(C.blue),showLine:true,borderColor:C.blue,borderWidth:2,pointRadius:4},{label:"New Orleans",data:[1.0, 1.77, 1.69, 0.93, 1.78],...dot(WHITE),showLine:true,borderColor:WHITE,borderWidth:2,pointRadius:4},{label:"Baltimore",data:[1.0, 2.09, 1.72, 2.11, 2.32],...dot(C.muted),showLine:true,borderColor:C.muted,borderWidth:2,pointRadius:4}]},options:{...base,plugins:{legend:{display:true,labels:{usePointStyle:true}}},scales:{y:{min:0,title:{display:true,text:'Assault calls per resident, whitest fifth = 1'}},x:{grid:{display:false},title:{display:true,text:'Neighborhoods by Black share of residents'}}}}});
+  new Chart(document.getElementById('rel'),{type:'bar',data:{labels:["Intimate partner", "Other relative", "Known", "Stranger"],datasets:[{label:"Survey, with injury, large places",data:[2.81, 1.52, 1.52, 1.02],...bar(C.blue)},{label:"Police, 51 cities",data:[4.47, 5.6, 4.33, 3.11],...bar(C.red)}]},options:{...base,plugins:{legend:{display:true},refLines:{y:1}},scales:{y:{min:0,title:{display:true,text:'Black women\'s rate over White women\'s'}},x:{grid:{display:false}}}}});
+</script>
+</body>
+</html>

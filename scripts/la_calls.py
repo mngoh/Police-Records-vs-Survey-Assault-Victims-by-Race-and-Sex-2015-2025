@@ -5,9 +5,9 @@
              violence, fights, battery, cutting, ADW, assault, shooting, stabbing or a violent person, grouped by
              reporting district (data/la/calls_<year>.csv). About a third of all calls carry no reporting district
              and are left out.
-  victims    the LA-Crime project's simple and aggravated assault victims (codes 624, 626, 230, 236), all ages and
+  victims    the Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023 project's simple and aggravated assault victims (codes 624, 626, 230, 236), all ages and
              both sexes for the per-call figures; women 18 and older by descent (B, W) for the within-band ratio.
-  residents  the LA-Crime project's ACS tract tables, tracts assigned to the 1,135 reporting-district polygons
+  residents  the Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023 project's ACS tract tables, tracts assigned to the 1,135 reporting-district polygons
              (data/la/reporting_districts.geojson) by centroid.
 Reporting districts with 500+ residents, in five population-weighted bands by Black share.
 
@@ -23,7 +23,7 @@ from shapely.geometry import shape
 from shapely.strtree import STRtree
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LA = ROOT.parent / "LA-Crime"
+LA = ROOT.parent / "Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023"
 D = ROOT / "data/la"
 TABLES = {"Black": "B01001B", "White": "B01001H", "Hispanic": "B01001I", "Asian": "B01001D"}
 YEARS = [2022, 2023]

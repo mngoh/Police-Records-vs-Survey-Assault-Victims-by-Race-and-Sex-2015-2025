@@ -2,7 +2,7 @@
 
 **In four cities, police write up about the same share of victims per 911 assault call whatever a neighborhood's racial makeup: the same in New York, Los Angeles and New Orleans, about a fifth more in Baltimore's Blackest neighborhoods. The 4x gap in police-recorded assaults on Black women is already there when the phone rings, and hospital emergency departments see a gap of the same size (4.6x for women, 2021 to 2022). Only the national victimization survey, in which women describe their own assaults, puts it at 1 to 2 times.**
 
-The national run ([US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025](https://github.com/mngoh/US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025)) found the police gap. This asks what it measures, with four tests: the National Crime Victimization Survey, which counts assaults whether or not police learned of them; DC's records, for one assault becoming several; Los Angeles's, for the same women counted repeatedly; and New York's 911 calls against its recorded victims, by precinct, for the recording stage. The scripts read the national run's outputs and the [LA-Crime](https://github.com/mngoh/LA-Crime) project from sibling folders.
+The full page is [index.html](https://mngoh.github.io/Police-Records-vs-Survey-Assault-Victims-by-Race-and-Sex-2015-2025/); every table is below. The national run ([US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025](https://github.com/mngoh/US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025)) found the police gap. This asks what it measures, with four tests: the National Crime Victimization Survey, which counts assaults whether or not police learned of them; DC's records, for one assault becoming several; Los Angeles's, for the same women counted repeatedly; and New York's 911 calls against its recorded victims, by precinct, for the recording stage. The scripts read the national run's outputs and the [Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023](https://github.com/mngoh/Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023) project from sibling folders.
 
 ## New York: the gap is in the calls, not in the recording
 
@@ -164,11 +164,12 @@ Bureau of Justice Statistics, NCVS Select person-level files, through the BJS op
 python scripts/fetch_ncvs.py      # data/raw/, as received, with .source.json
 python scripts/analyze_ncvs.py    # out/ncvs_results.json, out/ncvs.md
 python scripts/by_relationship.py  # out/by_relationship.json, out/by_relationship.md
-python scripts/la_repeat_victims.py  # out/la_repeat_victims.json, out/la_repeat_victims.md (reads ../LA-Crime/data)
+python scripts/la_repeat_victims.py  # out/la_repeat_victims.json, out/la_repeat_victims.md (reads ../Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023/data)
 python scripts/nyc_calls.py          # out/nyc_calls.json, out/nyc_calls.md (NYPD calls, complaints and precincts in data/nyc/, downloaded by curl; see the script)
 python scripts/nyc_premises.py       # out/nyc_premises.json, out/nyc_premises.md
-python scripts/bmore_calls.py        # out/bmore_calls.json, out/bmore_calls.md (Baltimore calls and polygons in data/baltimore/; victims from ../Baltimore-Assault-Victims)
-python scripts/la_calls.py           # out/la_calls.json, out/la_calls.md (LAPD calls and reporting districts in data/la/; victims and tracts from ../LA-Crime)
+python scripts/bmore_calls.py        # out/bmore_calls.json, out/bmore_calls.md (Baltimore calls and polygons in data/baltimore/; victims from ../Baltimore-MD-Assault-Victim-Rates-by-Race-and-Sex-2022-2024)
+python scripts/la_calls.py           # out/la_calls.json, out/la_calls.md (LAPD calls and reporting districts in data/la/; victims and tracts from ../Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023)
 python scripts/nola_calls.py         # out/nola_calls.json, out/nola_calls.md (New Orleans calls and reports in data/nola/)
-python scripts/nhamcs_ed.py          # out/nhamcs_ed.json, out/nhamcs_ed.md (data/nhamcs/ed2021-stata.dta and ed2022-stata.dta, from CDC's FTP via the Internet Archive)
+python scripts/nhamcs_ed.py          # out/nhamcs_ed.json, out/nhamcs_ed.md
+python scripts/build_page.py         # index.html (data/nhamcs/ed2021-stata.dta and ed2022-stata.dta, from CDC's FTP via the Internet Archive)
 ```
