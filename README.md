@@ -1,6 +1,6 @@
 # Police records against the survey: assault victims by race and sex, 2015 to 2025
 
-**Police write up about the same share of victims per 911 assault call in every neighborhood: exactly the same across New York's precincts, about a fifth more in Baltimore's Blackest neighborhoods than its whitest. The 4x gap in police-recorded assaults on Black women is already there when the phone rings. Women's own accounts in the national victimization survey put the difference at about 1 to 2 times; most of the rest is where assaults happen and who calls, not how police record them.**
+**In four cities, police write up about the same share of victims per 911 assault call whatever a neighborhood's racial makeup: the same in New York, Los Angeles and New Orleans, about a fifth more in Baltimore's Blackest neighborhoods. The 4x gap in police-recorded assaults on Black women is already there when the phone rings, and hospital emergency departments see a gap of the same size. Only the national victimization survey, in which women describe their own assaults, puts it at 1 to 2 times.**
 
 The national run ([US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025](https://github.com/mngoh/US-Large-Cities-Assault-Victim-Rates-by-Race-and-Sex-2022-2025)) found the police gap. This asks what it measures, with four tests: the National Crime Victimization Survey, which counts assaults whether or not police learned of them; DC's records, for one assault becoming several; Los Angeles's, for the same women counted repeatedly; and New York's 911 calls against its recorded victims, by precinct, for the recording stage. The scripts read the national run's outputs and the [LA-Crime](https://github.com/mngoh/LA-Crime) project from sibling folders.
 
@@ -37,6 +37,27 @@ Baltimore publishes the same three pieces (`out/bmore_calls.md`, `scripts/bmore_
 - Calls per resident are 2.3 times higher in the Blackest neighborhoods, as in New York (2.8).
 - Residence is a poor denominator for place: in the Blackest neighborhoods, White women's recorded rate is higher than Black women's: the few White women living there are not the White women assaulted there. Citywide, women 18 and older, the ratio is 2.5x.
 - Cincinnati, the other city with published calls, records no victim race since 2022, so it could not be used.
+
+## Los Angeles and New Orleans: the same test, two more cities
+
+Los Angeles (`out/la_calls.md`, `scripts/la_calls.py`): 680 LAPD reporting districts, 2022 to 2023, 82,000 violence-related calls, 70,000 recorded assault victims. Victims per call run 0.84 to 0.89 across the five bands of Black share (coefficient 0.08, standard error 0.11); calls per resident are 2.1 times higher in the Blackest districts than the whitest.
+
+New Orleans (`out/nola_calls.md`, `scripts/nola_calls.py`), where each call can be joined to the report it produced by its item number: 17 ZIP codes, 2022 to 2023, 40,000 assault-type calls, 22% of them producing a victim report. Victims per call run 0.94 to 1.08 across the bands with no trend (coefficient 0.00, standard error 0.12); calls per resident are 1.8 times higher in the Blackest ZIPs.
+
+| City | Unit | Victims per call, whitest to Blackest band | Recording effect (regression) | Calls per resident, Blackest over whitest |
+|---|---|---|---|---|
+| New York | 77 precincts | 0.62 to 0.54 | 1.07 (SE 0.07) | 2.8x |
+| Los Angeles | 680 reporting districts | 0.89 to 0.84 | 1.09 (SE 0.11) | 2.1x |
+| New Orleans | 17 ZIP codes | 0.99 to 1.07 | 1.00 (SE 0.12) | 1.8x |
+| Baltimore | 133 neighborhoods | 0.37 to 0.40 | 1.22 (SE 0.07) | 2.3x |
+
+In every city the within-band ratio of Black to White women's recorded rates is largest in the whitest areas and smallest in the Blackest: assaults are recorded where they happen, residents are counted where they live. Citywide, women 18 and older: New York 5.2x, Los Angeles 5.2x, New Orleans 3.5x, Baltimore 2.5x.
+
+## Emergency departments see the police gap, not the survey's
+
+Hospital records do not depend on anyone calling the police. The National Center for Health Statistics reports emergency department visits for assault (ICD-10 X92 to Y09, excluding sexual assault) at 13.8 per 1,000 a year for Black non-Hispanic people, 4.6 for Hispanic and 3.1 for White non-Hispanic people over 2019 to 2021, a 4.5x gap, both sexes and all ages (NCHS Data Brief 481, National Hospital Ambulatory Medical Care Survey; 603 sampled visits, so the figures are rough, and no breakdown by race and sex together is published). Police records in the 59 cities put Black women's rate at about 3.8 times White women's and Black men's at about 3 times White men's. The emergency-room gap matches the police gap, not the survey's.
+
+That moves the weight of the evidence. Two independent systems, police and hospitals, agree on about 4x; the one source that puts it near 1 to 2x is the household survey, whose coverage of Black women is the weakest of the three.
 
 ## The survey
 
@@ -85,11 +106,11 @@ The gap in police records is much larger than the gap in what women tell the sur
 | Survey "simple assault" includes threats police do not record | NCVS, injury only | No: with an injury required the survey ratio is 1.0 nationally, 1.75 in large places |
 | One assault becomes several police records | DC | No: 10.4x to 10.7x however records are counted |
 | The same women are reported again and again | Los Angeles | No: about 1.1 reports per woman in both groups; the ratio moves from 5.7x to 5.65x |
-| Police write up more victims per call in Black neighborhoods | New York, Baltimore | Not in New York (0.55 to 0.62 victims per call in every band); a little in Baltimore (0.37 to 0.40, up to 1.2x) |
+| Police write up more victims per call in Black neighborhoods | New York, Los Angeles, New Orleans, Baltimore | Not in three cities (victims per call flat across bands); a little in Baltimore (up to 1.2x) |
 | The excess is public housing or shelters | New York | Partly: 17% of the recorded assaults on Black women are in public housing against 3% of those on White women; outside it the ratio is 4.5x, not 5.2x |
 | Assaults are recorded where they happen, residents counted where they live | New York | Large: within the Blackest precincts the gap is 2.9x, against 5.2x citywide and 7.6x in the whitest |
 
-What remains is a gap of roughly 2 to 3 between the calls that reach police from the places Black women live and what Black women tell the survey. Two explanations are left and neither can be tested with public data:
+What remains is a gap of roughly 2 to 3 between the calls that reach police from the places Black women live and what Black women tell the survey. Two explanations are left. The emergency-room figures, which agree with the police and not the survey, point to the first; neither can be settled with public data:
 
 - The survey misses assaults on Black women: through non-response (each Black woman who answers stands in for 25% more women than each White woman who answers), women outside households, or partner violence not described at home.
 - More assaults on Black women come to police attention through other people: neighbors and bystanders calling 911, building and housing staff, hospitals, in places where that is the norm.
@@ -102,18 +123,18 @@ Two explanations are left, and each needs a dataset this project cannot reach. I
 |---|---|---|---|
 | Does the survey undercount assaults on Black women? | The restricted NCVS files, which carry the sample design and the non-respondents' Census characteristics, so victimization can be estimated by who did not answer and where they live | Federal Statistical Research Data Centers (Census Bureau), by approved proposal | A researcher with RDC access; about a year from proposal to result |
 | Who makes the call? | 911 records that say whether the caller was the victim, a bystander, a neighbor, a building or housing employee, or an alarm, joined to the recorded victim | Dispatch systems hold a caller type; few cities publish it. Ask the departments in New York, Baltimore, Chicago and Philadelphia for a one-year extract by call type and caller relationship, with no names | A records request to each department; weeks to months |
-| Does the gap exist in emergency rooms? | Assault injuries by patient race and sex, which do not depend on anyone calling the police | HCUP state emergency department databases (AHRQ), by purchase; CDC WISQARS nonfatal injury estimates, public but coarse | Anyone, for a fee; WISQARS now |
+| Does the gap exist in emergency rooms, by sex? | Assault injuries by patient race and sex together. NCHS reports 13.8 against 3.1 per 1,000 by race, both sexes (above); the public NHAMCS microdata could give it by sex, on a few dozen sampled visits a year | ftp.cdc.gov, NHAMCS emergency department files; HCUP state databases for larger samples, by purchase | Anyone, a day; HCUP for a fee |
 | Are Black women in shelters and institutions counted anywhere? | Shelter intake counts by race and sex and reason, and hospital records from places the survey does not reach | HUD Homeless Management Information Systems (local continuums of care); hospital data as above | A records request to each city's continuum of care |
 | Does the recording effect vary by city? | The New York and Baltimore test in every city that publishes calls with a type and a location and victims with race: Seattle, Detroit, Nashville, Minneapolis, Denver and Philadelphia look possible | Each city's open-data portal | This pipeline, about a day a city |
 
 Next steps, in the order they pay off:
 
-1. Run the calls test in three more cities. If victims per call is flat in most and rises in some, the recording effect is a local practice, not a national one, and the cities where it rises are the ones to ask about.
-2. Pull the CDC WISQARS nonfatal assault injury rates by race and sex for 2022 to 2024. If the emergency-room gap is near the survey's 1 to 2 times, the police number is the outlier; if it is near 4, the survey is.
+1. Done: the calls test in Los Angeles and New Orleans (flat) and Baltimore (a small effect). The recording effect is local where it exists; Baltimore is the city to ask about.
+2. Done in part: the emergency-room gap by race is near 4, so the survey is the outlier. Still to do: by race and sex together, from the NHAMCS microdata.
 3. Write the one-page question for the restricted NCVS and offer it to a researcher with Research Data Center access. The question: among women who did not answer the survey, estimated from their block's characteristics, how much higher would the assault rate of Black women be?
 4. Ask one department for a caller-type extract. Baltimore, whose dispatch data is already published in detail, is the natural first ask.
 
-What none of these would change: police records show about 4 times as many assaults on Black women as on White women in every large city, and the difference is already in the 911 calls.
+What none of these would change: police records show about 4 times as many assaults on Black women as on White women in every large city, the difference is already in the 911 calls, and emergency departments see a gap of the same size.
 
 ## Limits
 
@@ -139,4 +160,6 @@ python scripts/la_repeat_victims.py  # out/la_repeat_victims.json, out/la_repeat
 python scripts/nyc_calls.py          # out/nyc_calls.json, out/nyc_calls.md (NYPD calls, complaints and precincts in data/nyc/, downloaded by curl; see the script)
 python scripts/nyc_premises.py       # out/nyc_premises.json, out/nyc_premises.md
 python scripts/bmore_calls.py        # out/bmore_calls.json, out/bmore_calls.md (Baltimore calls and polygons in data/baltimore/; victims from ../Baltimore-Assault-Victims)
+python scripts/la_calls.py           # out/la_calls.json, out/la_calls.md (LAPD calls and reporting districts in data/la/; victims and tracts from ../LA-Crime)
+python scripts/nola_calls.py         # out/nola_calls.json, out/nola_calls.md (New Orleans calls and reports in data/nola/)
 ```

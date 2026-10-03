@@ -1,0 +1,117 @@
+{
+ "years": [
+  2022,
+  2023
+ ],
+ "districts": 680,
+ "tracts_unassigned": 14,
+ "residents_unassigned": 35448,
+ "totals": {
+  "calls": 82071,
+  "victims": 70000
+ },
+ "bands": [
+  {
+   "band": 0,
+   "districts": 149,
+   "black_share": [
+    0,
+    2
+   ],
+   "residents": 575996,
+   "calls_per_1k": 10.6,
+   "victims_per_1k": 9.4,
+   "victims_per_call": 0.887,
+   "black_women_rate": 10115,
+   "white_women_rate": 531,
+   "ratio_black_white_women": 19.04,
+   "black_women_victims": 582,
+   "white_women_victims": 877
+  },
+  {
+   "band": 1,
+   "districts": 134,
+   "black_share": [
+    2,
+    4
+   ],
+   "residents": 577791,
+   "calls_per_1k": 11.4,
+   "victims_per_1k": 9.5,
+   "victims_per_call": 0.836,
+   "black_women_rate": 4245,
+   "white_women_rate": 562,
+   "ratio_black_white_women": 7.56,
+   "black_women_victims": 726,
+   "white_women_victims": 1073
+  },
+  {
+   "band": 2,
+   "districts": 136,
+   "black_share": [
+    4,
+    7
+   ],
+   "residents": 580591,
+   "calls_per_1k": 12.5,
+   "victims_per_1k": 10.8,
+   "victims_per_call": 0.866,
+   "black_women_rate": 4013,
+   "white_women_rate": 698,
+   "ratio_black_white_women": 5.75,
+   "black_women_victims": 1057,
+   "white_women_victims": 1131
+  },
+  {
+   "band": 3,
+   "districts": 128,
+   "black_share": [
+    7,
+    14
+   ],
+   "residents": 578303,
+   "calls_per_1k": 14.1,
+   "victims_per_1k": 11.9,
+   "victims_per_call": 0.844,
+   "black_women_rate": 3185,
+   "white_women_rate": 837,
+   "ratio_black_white_women": 3.81,
+   "black_women_victims": 1536,
+   "white_women_victims": 1219
+  },
+  {
+   "band": 4,
+   "districts": 133,
+   "black_share": [
+    14,
+    78
+   ],
+   "residents": 579425,
+   "calls_per_1k": 22.3,
+   "victims_per_1k": 18.8,
+   "victims_per_call": 0.844,
+   "black_women_rate": 3671,
+   "white_women_rate": 1572,
+   "ratio_black_white_women": 2.33,
+   "black_women_victims": 5317,
+   "white_women_victims": 956
+  }
+ ],
+ "citywide_women_18plus": {
+  "black_women_rate": 3805,
+  "white_women_rate": 726,
+  "ratio": 5.24
+ },
+ "top_over_bottom": {
+  "calls_per_1k": 2.1,
+  "victims_per_1k": 2.0,
+  "victims_per_call": 0.95
+ },
+ "regression": {
+  "black_share_coef": 0.084,
+  "black_share_se": 0.107,
+  "log_calls_coef": 0.896,
+  "r2": 0.835
+ },
+ "corr_black_share_victims_per_call": -0.048
+}
