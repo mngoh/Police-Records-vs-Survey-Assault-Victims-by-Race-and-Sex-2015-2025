@@ -17,8 +17,6 @@ Focus: Black women. This screen finds candidates; read every flag in context bef
 Files: `README.md`
 
 ### README.md
-- **review: Causal claim** (`because`): "- Residence is a poor denominator for place: in the Blackest neighborhoods, White women's recorded rate is higher than Black women's, because the few White women living there are not the White women assaulted there. City..."  
-  The data shows rates, not causes. Keep causal words only in sentences that say a cause is not measured.
 - **review: Offender implication** (`offender`): "By the victim's relationship to the offender (`out/by_relationship.md`, `scripts/by_relationship.py`), women 18 and older:"  
   Victim data says nothing about who offended. Remove, or state that offenders are not in the data.
 - **review: Offender implication** (`offender`): "- Not the cause, tested in DC's records (the largest gap, 10.5x for women 18 and older): one assault producing several victim records. Counting one record per incident, leaving out mutual fights ("victim was offender"), ..."  

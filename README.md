@@ -94,6 +94,27 @@ What remains is a gap of roughly 2 to 3 between the calls that reach police from
 - The survey misses assaults on Black women: through non-response (each Black woman who answers stands in for 25% more women than each White woman who answers), women outside households, or partner violence not described at home.
 - More assaults on Black women come to police attention through other people: neighbors and bystanders calling 911, building and housing staff, hospitals, in places where that is the norm.
 
+## What would close the gap in what is known
+
+Two explanations are left, and each needs a dataset this project cannot reach. In order of what each would settle:
+
+| Open question | What would answer it | Where it is | Who can do it |
+|---|---|---|---|
+| Does the survey undercount assaults on Black women? | The restricted NCVS files, which carry the sample design and the non-respondents' Census characteristics, so victimization can be estimated by who did not answer and where they live | Federal Statistical Research Data Centers (Census Bureau), by approved proposal | A researcher with RDC access; about a year from proposal to result |
+| Who makes the call? | 911 records that say whether the caller was the victim, a bystander, a neighbor, a building or housing employee, or an alarm, joined to the recorded victim | Dispatch systems hold a caller type; few cities publish it. Ask the departments in New York, Baltimore, Chicago and Philadelphia for a one-year extract by call type and caller relationship, with no names | A records request to each department; weeks to months |
+| Does the gap exist in emergency rooms? | Assault injuries by patient race and sex, which do not depend on anyone calling the police | HCUP state emergency department databases (AHRQ), by purchase; CDC WISQARS nonfatal injury estimates, public but coarse | Anyone, for a fee; WISQARS now |
+| Are Black women in shelters and institutions counted anywhere? | Shelter intake counts by race and sex and reason, and hospital records from places the survey does not reach | HUD Homeless Management Information Systems (local continuums of care); hospital data as above | A records request to each city's continuum of care |
+| Does the recording effect vary by city? | The New York and Baltimore test in every city that publishes calls with a type and a location and victims with race: Seattle, Detroit, Nashville, Minneapolis, Denver and Philadelphia look possible | Each city's open-data portal | This pipeline, about a day a city |
+
+Next steps, in the order they pay off:
+
+1. Run the calls test in three more cities. If victims per call is flat in most and rises in some, the recording effect is a local practice, not a national one, and the cities where it rises are the ones to ask about.
+2. Pull the CDC WISQARS nonfatal assault injury rates by race and sex for 2022 to 2024. If the emergency-room gap is near the survey's 1 to 2 times, the police number is the outlier; if it is near 4, the survey is.
+3. Write the one-page question for the restricted NCVS and offer it to a researcher with Research Data Center access. The question: among women who did not answer the survey, estimated from their block's characteristics, how much higher would the assault rate of Black women be?
+4. Ask one department for a caller-type extract. Baltimore, whose dispatch data is already published in detail, is the natural first ask.
+
+What none of these would change: police records show about 4 times as many assaults on Black women as on White women in every large city, and the difference is already in the 911 calls.
+
 ## Limits
 
 - This shows what, not why: it says what each source counts and where they part ways. It does not say why Black women are assaulted, or why anyone calls the police.
