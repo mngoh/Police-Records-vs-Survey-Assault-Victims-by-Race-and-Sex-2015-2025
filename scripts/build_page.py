@@ -28,6 +28,9 @@ CSS = """
     .tbl td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .limits { margin: 0 0 40px 18px; color: var(--muted); font-size: 13px; line-height: 1.6; max-width: 900px; }
     .limits li + li { margin-top: 6px; } .limits strong { color: var(--text); font-weight: 600; }
+    @media (max-width: 768px) {
+      .tbl { font-size: 11px; } .tbl th, .tbl td { padding: 6px 8px; } .tbl td.num { white-space: normal; }
+    }
 """
 
 
@@ -126,11 +129,11 @@ def main():
            ("Hospitals see what police see", "NHAMCS", f"Yes: {x(ed_w['ratio'])}x for women, {x(ED['ratios']['Black men vs White men']['ratio'])}x for men")]
     ledger = ('<div class="section-title">Every explanation tested</div>' + table(["Could the police gap be...", "Tested in", "Answer"], [[esc(a), esc(b), esc(c)] for a, b, c in led], num_from=9))
 
-    cities_tbl = table(["City", "Unit", "Victims per call, whitest to Blackest fifth", "Recording effect", "Calls per resident, Blackest over whitest"],
-                       [[esc(c), f"{r.get('precincts') or r.get('districts') or r.get('zips') or r.get('neighborhoods')} {CITIES[c][1]}",
+    cities_tbl = table(["City", "Victims per call, whitest to Blackest fifth", "Recording effect", "Calls per resident, Blackest over whitest"],
+                       [[f"{esc(c)}<br><span style=\"color:var(--muted)\">{r.get('precincts') or r.get('districts') or r.get('zips') or r.get('neighborhoods')} {CITIES[c][1]}</span>",
                          f"{r['bands'][0]['victims_per_call']} to {r['bands'][-1]['victims_per_call']}", f"{__import__('math').exp(r['regression']['black_share_coef']):.2f} (SE {r['regression']['black_share_se']})",
-                         f"{r['top_over_bottom']['calls_per_1k']}x"] for c, r in calls.items()], num_from=2)
-    ed_tbl = table(["", "Black", "White", "Hispanic", "Black vs White (95% interval)"],
+                         f"{r['top_over_bottom']['calls_per_1k']}x"] for c, r in calls.items()], num_from=1)
+    ed_tbl = table(["", "Black", "White", "Hispanic", "Black vs White, 95% interval"],
                    [["Women", f"{ED['cells']['Black women']['rate_per_100k']:,}", f"{ED['cells']['White women']['rate_per_100k']:,}", f"{ED['cells']['Hispanic women']['rate_per_100k']:,}", f"{ed_w['ratio']} ({ed_w['ci95'][0]} to {ed_w['ci95'][1]})"],
                     ["Men", f"{ED['cells']['Black men']['rate_per_100k']:,}", f"{ED['cells']['White men']['rate_per_100k']:,}", f"{ED['cells']['Hispanic men']['rate_per_100k']:,}", f"{ED['ratios']['Black men vs White men']['ratio']} ({ED['ratios']['Black men vs White men']['ci95'][0]} to {ED['ratios']['Black men vs White men']['ci95'][1]})"]])
     reporting = ('<div class="section-title">The cities</div><p class="note">Each city publishes 911 calls with a type and a place, and recorded victims with race. ' + esc("New Orleans joins each call to the report it produced by item number.") + '</p>' + cities_tbl
