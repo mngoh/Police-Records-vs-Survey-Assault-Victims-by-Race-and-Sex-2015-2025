@@ -69,23 +69,20 @@ def main():
     effect = [c for c in calls if c not in flat]
     share = {g: sv_us["share_reported"][g]["pct"] for g in ("Black", "White", "Hispanic")}
 
-    lede = (f"Police record assaults on Black women about {x(pol['ratio']['White'])} times as often as on White women across large US cities, and hospital emergency "
-            f"departments see a gap of the same size ({x(ed_w['ratio'])} times for women). Only the national victimization survey, in which women describe their own "
-            f"assaults, puts it near {x(sv_us['ratio_all']['White']['ratio'])}. The police gap is not an artifact of policing: in {len(flat)} of {len(calls)} cities police "
-            "write up the same share of victims per 911 assault call whatever a neighborhood's racial makeup.")
-    question = "Is the 4x gap in police-recorded assaults on Black women a fact about assaults, about reporting, or about how police record?"
+    lede = (f"Police record assaults on Black women about {x(pol['ratio']['White'])} times as often as on White women. Hospitals see the same gap ({x(ed_w['ratio'])} times). "
+            f"Only the victimization survey, where women describe their own assaults, puts it near {x(sv_us['ratio_all']['White']['ratio'])}.")
+    question = "Is the 4x gap in police records about assaults, about reporting, or about how police record?"
     points = [
-        f"Reporting is not it: Black women report {share['Black']:.0f}% of their assaults to police, White women {share['White']:.0f}%, which lifts the survey's ratio only to about {x(sv_big['ratio_reported']['White']['ratio'])} in large places.",
-        f"Recording is not it: victims per 911 assault call are flat across neighborhoods in {', '.join(flat)}" + (f", and rise only a little in {', '.join(effect)} ({x(float(__import__('math').exp(calls[effect[0]]['regression']['black_share_coef'])))} times at most)." if effect else "."),
-        f"Repeat counting is not it: in Los Angeles, Black and White women both average about {LA['groups']['Black']['reports_per_woman']:.1f} police reports each; counting women instead of reports moves the ratio from {LA['ratio_reports_la_page']['White']} to {LA['ratio_women_implied']['White']}.",
-        f"Hospitals agree with police: emergency department visits for assault run {x(ed_w['ratio'])} times higher for Black women than White women (interval {ed_w['ci95'][0]} to {ed_w['ci95'][1]}), with no call to police involved.",
-        "What remains open is why the survey sees so little of it. Each Black woman who answers stands in for a quarter more women than each White woman who answers, and the survey does not reach shelters or institutions.",
+        f"Not reporting: Black women report {share['Black']:.0f}% of assaults, White women {share['White']:.0f}%.",
+        f"Not recording: police write up the same share of victims per 911 call in every neighborhood in {', '.join(flat)}" + (f"; a little more in {', '.join(effect)}." if effect else "."),
+        f"Not repeat counting: about {LA['groups']['Black']['reports_per_woman']:.1f} reports per woman in both groups in Los Angeles.",
+        f"Hospitals agree with police: {x(ed_w['ratio'])} times, with no call involved. What is left open is why the survey sees so little.",
     ]
     answer = '<ul class="pts">' + "".join(f"<li>{esc(p)}</li>" for p in points) + "</ul>"
-    tiles = [("Police records", f"{x(pol['ratio']['White'])}x", "Black women's rate over White women's, 51 cities"),
-             ("Hospital emergency departments", f"{x(ed_w['ratio'])}x", "assault visits, women 18+, 2021 to 2022"),
-             ("Victimization survey", f"{x(sv_us['ratio_all']['White']['ratio'])}x", f"women's own accounts, US ({x(sv_big['ratio_all']['White']['ratio'])}x in large places)"),
-             ("Cities where recording adds nothing", f"{len(flat)} of {len(calls)}", "victims per 911 call flat across neighborhoods")]
+    tiles = [("Police records", f"{x(pol['ratio']['White'])}x", "51 cities"),
+             ("Emergency departments", f"{x(ed_w['ratio'])}x", "women, 2021 to 2022"),
+             ("Victimization survey", f"{x(sv_us['ratio_all']['White']['ratio'])}x", f"{x(sv_big['ratio_all']['White']['ratio'])}x in large places"),
+             ("Recording adds nothing", f"{len(flat)} of {len(calls)}", "cities")]
     cards = '<div class="cards">' + "".join(f'<div class="card"><div class="label">{esc(l_)}</div><div class="value">{esc(v)}</div><div class="sub">{esc(s)}</div></div>' for l_, v, s in tiles) + "</div>"
 
     # ---------- charts ----------
@@ -95,8 +92,7 @@ def main():
     js.append(f"new Chart(document.getElementById('sources'),{{type:'bar',data:{{labels:{json.dumps(labels)},datasets:[{{label:'Black women\\'s rate over White women\\'s',data:{json.dumps(bars)},...bar(C.red),maxBarThickness:18}}]}},"
               f"options:{{...base,indexAxis:'y',layout:{{padding:{{top:16}}}},plugins:{{legend:{{display:false}},refLines:{{x:1,label:'1 = no gap'}},tooltip:{{callbacks:{{label:c=>({json.dumps(tips)})[c.label]}}}}}},"
               f"scales:{{y:{{grid:{{display:false}},ticks:{{color:C.text,autoSkip:false}}}},x:{{min:0,suggestedMax:6,title:{{display:true,text:'Times White women\\'s rate'}}}}}}}}}});")
-    src_box = box("sources", "Three sources, one comparison", "Black women's assault rate over White women's, adults. Bars at 1 would mean no gap.", 230,
-                  f'<p class="note" style="margin-top:12px">{esc("Police and hospitals agree; the survey is the outlier. Survey intervals assume a design effect of 2.")}</p>')
+    src_box = box("sources", "Three sources", "Black women's assault rate over White women's. A bar ending at 1 would mean no gap.", 230)
 
     colors = ["C.red", "C.blue", "WHITE", "C.muted"]
     bands = ["whitest fifth", "2nd", "3rd", "4th", "Blackest fifth"]
@@ -104,12 +100,12 @@ def main():
                   for (c, r), col in zip(calls.items(), colors))
     js.append(f"new Chart(document.getElementById('vpc'),{{type:'line',data:{{labels:{json.dumps(bands)},datasets:[{ds}]}},"
               f"options:{{...base,plugins:{{legend:{{display:true,labels:{{usePointStyle:true}}}}}},scales:{{y:{{min:0,suggestedMax:1.2,title:{{display:true,text:'Recorded victims per 911 assault call'}}}},x:{{grid:{{display:false}},title:{{display:true,text:'Neighborhoods by Black share of residents'}}}}}}}}}});")
-    vpc_box = box("vpc", "What police write up per call", "Flat lines mean police record the same share of victims whatever the neighborhood. " + ", ".join(f"{c}: {r['regression']['black_share_coef']:+.2f} (SE {r['regression']['black_share_se']})" for c, r in calls.items()) + ".", 300)
+    vpc_box = box("vpc", "Victims recorded per 911 call", "Flat = police record the same share everywhere.", 300)
     ds2 = ",".join(f"{{label:{json.dumps(c)},data:{json.dumps([round(b['calls_per_1k'] / r['bands'][0]['calls_per_1k'], 2) for b in r['bands']])},...dot({col}),showLine:true,borderColor:{col},borderWidth:2,pointRadius:4}}"
                    for (c, r), col in zip(calls.items(), colors))
     js.append(f"new Chart(document.getElementById('cpr'),{{type:'line',data:{{labels:{json.dumps(bands)},datasets:[{ds2}]}},"
               f"options:{{...base,plugins:{{legend:{{display:true,labels:{{usePointStyle:true}}}}}},scales:{{y:{{min:0,title:{{display:true,text:'Assault calls per resident, whitest fifth = 1'}}}},x:{{grid:{{display:false}},title:{{display:true,text:'Neighborhoods by Black share of residents'}}}}}}}}}});")
-    cpr_box = box("cpr", "Where the calls come from", "Assault calls per resident rise with a neighborhood's Black share: " + ", ".join(f"{c} {r['top_over_bottom']['calls_per_1k']}x" for c, r in calls.items()) + ". The gap is already there when the phone rings.", 300)
+    cpr_box = box("cpr", "Calls per resident", "Rising = the gap is already in the calls.", 300)
 
     rel_keys = ["intimate", "relative", "known", "stranger"]
     rel_labels = ["Intimate partner", "Other relative", "Known", "Stranger"]
@@ -117,7 +113,7 @@ def main():
                    (("Survey, with injury, large places", "survey, places of 250,000+, injured only", "C.blue"), ("Police, 51 cities", "police, 51 cities", "C.red")))
     js.append(f"new Chart(document.getElementById('rel'),{{type:'bar',data:{{labels:{json.dumps(rel_labels)},datasets:[{ds3}]}},"
               f"options:{{...base,plugins:{{legend:{{display:true}},refLines:{{y:1}}}},scales:{{y:{{min:0,title:{{display:true,text:'Black women\\'s rate over White women\\'s'}}}},x:{{grid:{{display:false}}}}}}}}}});")
-    rel_box = box("rel", "By who did it", "Survey and police, women 18 and older. The police gap is larger in every relationship category, so no one kind of assault carries it.", 300)
+    rel_box = box("rel", "By who did it", "The police gap is larger in every category.", 300)
 
     led = [("Black women report assaults more often", "Survey", f"A little: {share['Black']:.0f}% against {share['White']:.0f}%; lifts the survey ratio to about {x(sv_big['ratio_reported']['White']['ratio'])}, not 4"),
            ("Survey counts threats as assaults", "Survey, injury only", f"No: with an injury required the ratio is {x(sv_us['ratio_all']['White']['ratio'])} nationally"),
@@ -136,8 +132,8 @@ def main():
     ed_tbl = table(["", "Black", "White", "Hispanic", "Black vs White, 95% interval"],
                    [["Women", f"{ED['cells']['Black women']['rate_per_100k']:,}", f"{ED['cells']['White women']['rate_per_100k']:,}", f"{ED['cells']['Hispanic women']['rate_per_100k']:,}", f"{ed_w['ratio']} ({ed_w['ci95'][0]} to {ed_w['ci95'][1]})"],
                     ["Men", f"{ED['cells']['Black men']['rate_per_100k']:,}", f"{ED['cells']['White men']['rate_per_100k']:,}", f"{ED['cells']['Hispanic men']['rate_per_100k']:,}", f"{ED['ratios']['Black men vs White men']['ratio']} ({ED['ratios']['Black men vs White men']['ci95'][0]} to {ED['ratios']['Black men vs White men']['ci95'][1]})"]])
-    reporting = ('<div class="section-title">The cities</div><p class="note">Each city publishes 911 calls with a type and a place, and recorded victims with race. ' + esc("New Orleans joins each call to the report it produced by item number.") + '</p>' + cities_tbl
-                 + f'<div class="section-title">Emergency departments, {ED["years"][0]} to {ED["years"][-1]}</div><p class="note">' + esc(f"NHAMCS public-use files, assault codes X92 to Y09, adults, per 100,000 a year. {ED['cells']['Black women']['sampled_visits']} Black women's and {ED['cells']['White women']['sampled_visits']} White women's visits sampled; intervals ignore the survey design.") + '</p>' + ed_tbl)
+    reporting = ('<div class="section-title">The cities</div>' + cities_tbl
+                 + f'<div class="section-title">Emergency departments, {ED["years"][0]} to {ED["years"][-1]}</div><p class="note">' + esc(f"Per 100,000 adults a year; {ED['cells']['Black women']['sampled_visits']} Black and {ED['cells']['White women']['sampled_visits']} White women's visits sampled.") + '</p>' + ed_tbl)
 
     limits = [("Small survey cells", f"{sv_us['cases']['Black']} Black women assault victims in the survey over ten years; the hospital figure rests on {ED['cells']['Black women']['sampled_visits']} sampled visits. Intervals are approximate."),
               ("Definitions differ", "Survey simple assault includes threats; police and hospital counts do not. The injury-only checks address this."),
@@ -147,9 +143,8 @@ def main():
               ("What, not why", "Nothing here measures causes, offenders or circumstances.")]
     limits_html = '<div class="section-title">Limits</div><ul class="limits">' + "".join(f"<li><strong>{esc(h)}.</strong> {esc(t)}</li>" for h, t in limits) + "</ul>"
     nav = f'<a href="{NATIONAL}">The 59-city page</a><a href="{REPO}">Code</a><a href="https://martinngoh.com">martinngoh.com</a>'
-    method = ("Survey: BJS NCVS Select files, women 18 and older, aggravated and simple assault, series-adjusted weights, 2015 to 2024. Hospitals: NHAMCS 2021 and 2022 emergency department files. "
-              "Police: the 59-city run's victim files and ACS populations. Calls: each city's open data, grouped by neighborhood, residents from ACS tracts assigned by centroid. "
-              f"Generated by scripts/build_page.py from out/*.json; the README holds every table.")
+    method = ("Survey: BJS NCVS, women 18 and older, 2015 to 2024. Hospitals: NHAMCS 2021 and 2022. Police: the 59-city run. Calls: each city's open data by neighborhood. "
+              "Every number is generated from out/*.json; the README holds the full tables.")
     pre = ("const WHITE = '" + WHITE + "';\n  "
            "const dot = c => ({ borderColor: C.surface, backgroundColor: c, borderWidth: 2, pointRadius: 5, pointHoverRadius: 7, pointHitRadius: 12, showLine: false });\n  "
            "Chart.register({ id: 'refLines', beforeDatasetsDraw(chart, args, o) {\n"
